@@ -1,0 +1,438 @@
+{
+  "frames": {
+    "1100-7": 0,
+    "1100-8": 1,
+    "1100-9": 2,
+    "1100-10": 3,
+    "1100-11": 4,
+    "750-0": 5,
+    "750-1": 6,
+    "750-2": 7,
+    "750-3": 8,
+    "750-4": 9,
+    "750-5": 10,
+    "750-6": 11,
+    "750-7": 12,
+    "750-8": 13,
+    "750-9": 14,
+    "750-10": 15,
+    "850-0": 16,
+    "850-1": 17,
+    "850-2": 18,
+    "650-0": 19,
+    "650-1": 20,
+    "650-2": 21,
+    "650-3": 22,
+    "1100-4": 23,
+    "1100-5": 24,
+    "1100-6": 25,
+    "1950-0": 26,
+    "1950-3": 27,
+    "1950-5": 28,
+    "1950-6": 29,
+    "1950-8": 30,
+    "4000-0": 31,
+    "4000-1": 32,
+    "4000-2": 33,
+    "4000-3": 34,
+    "4000-4": 35,
+    "4000-5": 36,
+    "4000-6": 37,
+    "4000-8": 38,
+    "4000-10": 39,
+    "stance-2150-2": 40,
+    "stance-2150-3": 41,
+    "stance-2150-4": 42,
+    "stance-2150-5": 43,
+    "stance-2150-6": 44,
+    "stance-1950-0": 45,
+    "stance-1950-2": 46,
+    "stance-1950-3": 47,
+    "stance-1950-5": 48,
+    "stance-1950-6": 49,
+    "stance-1950-7": 50,
+    "stance-1950-8": 51,
+    "stance-2400-4": 52,
+    "stance-2400-5": 53,
+    "stance-2400-6": 54,
+    "stance-2400-7": 55,
+    "stance-2400-8": 56,
+    "stance-2400-9": 57
+  },
+  "actions": {
+    "idle": [
+      {
+        "key": "1100-7",
+        "duration": 5
+      },
+      {
+        "key": "1100-8",
+        "duration": 5
+      },
+      {
+        "key": "1100-9",
+        "duration": 5
+      },
+      {
+        "key": "1100-10",
+        "duration": 5
+      },
+      {
+        "key": "1100-11",
+        "duration": 5
+      },
+      {
+        "key": "1100-10",
+        "duration": 5
+      },
+      {
+        "key": "1100-9",
+        "duration": 5
+      },
+      {
+        "key": "1100-8",
+        "duration": 5
+      }
+    ],
+    "walk": [
+      {
+        "key": "750-0",
+        "duration": 3
+      },
+      {
+        "key": "750-1",
+        "duration": 3
+      },
+      {
+        "key": "750-2",
+        "duration": 3
+      },
+      {
+        "key": "750-3",
+        "duration": 3
+      },
+      {
+        "key": "750-4",
+        "duration": 3
+      },
+      {
+        "key": "750-5",
+        "duration": 3
+      },
+      {
+        "key": "750-6",
+        "duration": 3
+      },
+      {
+        "key": "750-7",
+        "duration": 3
+      },
+      {
+        "key": "750-8",
+        "duration": 3
+      },
+      {
+        "key": "750-9",
+        "duration": 3
+      },
+      {
+        "key": "750-10",
+        "duration": 3
+      }
+    ],
+    "back": [
+      {
+        "key": "750-10",
+        "duration": 3
+      },
+      {
+        "key": "750-9",
+        "duration": 3
+      },
+      {
+        "key": "750-8",
+        "duration": 3
+      },
+      {
+        "key": "750-7",
+        "duration": 3
+      },
+      {
+        "key": "750-6",
+        "duration": 3
+      },
+      {
+        "key": "750-5",
+        "duration": 3
+      },
+      {
+        "key": "750-4",
+        "duration": 3
+      },
+      {
+        "key": "750-3",
+        "duration": 3
+      },
+      {
+        "key": "750-2",
+        "duration": 3
+      },
+      {
+        "key": "750-1",
+        "duration": 3
+      },
+      {
+        "key": "750-0",
+        "duration": 3
+      }
+    ],
+    "jump": [
+      {
+        "key": "650-0",
+        "duration": 5
+      },
+      {
+        "key": "650-1",
+        "duration": 5
+      },
+      {
+        "key": "650-2",
+        "duration": 5
+      },
+      {
+        "key": "650-3",
+        "duration": 5
+      }
+    ],
+    "punch": [
+      {
+        "key": "1100-4",
+        "duration": 5
+      },
+      {
+        "key": "1100-5",
+        "duration": 5
+      },
+      {
+        "key": "1100-6",
+        "duration": 5
+      },
+      {
+        "key": "1100-7",
+        "duration": 5
+      }
+    ],
+    "kick": [
+      {
+        "key": "stance-1950-0",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-2",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-3",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-7",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-8",
+        "duration": 5
+      },
+      {
+        "key": "stance-1950-0",
+        "duration": 5
+      }
+    ],
+    "special": [
+      {
+        "key": "1950-0",
+        "duration": 5
+      },
+      {
+        "key": "1950-3",
+        "duration": 5
+      },
+      {
+        "key": "1950-5",
+        "duration": 5
+      },
+      {
+        "key": "1950-6",
+        "duration": 5
+      },
+      {
+        "key": "1950-8",
+        "duration": 5
+      },
+      {
+        "key": "1950-6",
+        "duration": 5
+      },
+      {
+        "key": "1950-5",
+        "duration": 5
+      }
+    ],
+    "super": [
+      {
+        "key": "4000-6",
+        "duration": 5
+      },
+      {
+        "key": "4000-8",
+        "duration": 5
+      },
+      {
+        "key": "4000-10",
+        "duration": 5
+      },
+      {
+        "key": "1100-7",
+        "duration": 4
+      },
+      {
+        "key": "1100-8",
+        "duration": 4
+      },
+      {
+        "key": "1100-9",
+        "duration": 4
+      },
+      {
+        "key": "1100-10",
+        "duration": 4
+      },
+      {
+        "key": "1100-11",
+        "duration": 4
+      }
+    ],
+    "fall": [
+      {
+        "key": "4000-0",
+        "duration": 5
+      },
+      {
+        "key": "4000-1",
+        "duration": 5
+      },
+      {
+        "key": "4000-2",
+        "duration": 5
+      },
+      {
+        "key": "4000-3",
+        "duration": 5
+      }
+    ],
+    "landing": [
+      {
+        "key": "4000-3",
+        "duration": 5
+      },
+      {
+        "key": "4000-4",
+        "duration": 5
+      },
+      {
+        "key": "4000-5",
+        "duration": 5
+      }
+    ],
+    "down": [
+      {
+        "key": "4000-6",
+        "duration": 5
+      }
+    ],
+    "rise": [
+      {
+        "key": "4000-8",
+        "duration": 5
+      },
+      {
+        "key": "4000-10",
+        "duration": 5
+      }
+    ],
+    "crouch": [
+      {
+        "key": "stance-2150-2",
+        "duration": 5
+      }
+    ],
+    "crouchPunch": [
+      {
+        "key": "stance-2150-2",
+        "duration": 5
+      },
+      {
+        "key": "stance-2150-3",
+        "duration": 5
+      },
+      {
+        "key": "stance-2150-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-2150-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-2150-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-2150-2",
+        "duration": 5
+      }
+    ],
+    "crouchKick": [
+      {
+        "key": "stance-2400-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-7",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-8",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-9",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-2400-4",
+        "duration": 5
+      }
+    ]
+  }
+}

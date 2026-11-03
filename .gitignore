@@ -1,0 +1,14 @@
+node_modules/
+build/
+.pnpm-store/
+.env
+.env.*
+!.env.example
+.DS_Store
+dist/
+.vercel/
+.openai/
+work/
+*.pem
+*.key
+*.log

@@ -1,0 +1,28 @@
+{
+  "name": "neon-rival",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @neon-rival/client dev",
+    "dev:server": "pnpm --filter @neon-rival/server dev",
+    "build": "pnpm typecheck && pnpm --filter @neon-rival/client build && pnpm --filter @neon-rival/server build",
+    "build:client": "pnpm --filter @neon-rival/client build",
+    "build:server": "pnpm --filter @neon-rival/server build",
+    "start:server": "node --env-file-if-exists=.env apps/server/build/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test packages/simulation/test/*.test.ts apps/server/test/*.test.ts",
+    "preview": "pnpm --filter @neon-rival/client preview"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.2",
+    "esbuild": "^0.25.12",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,978 @@
+{
+  "width": 200,
+  "height": 180,
+  "frames": {
+    "0_0": 0,
+    "0_1": 1,
+    "0_2": 2,
+    "0_3": 3,
+    "0_4": 4,
+    "0_5": 5,
+    "0_6": 6,
+    "0_7": 7,
+    "0_8": 8,
+    "0_9": 9,
+    "20_0": 10,
+    "20_1": 11,
+    "20_2": 12,
+    "20_3": 13,
+    "20_4": 14,
+    "20_5": 15,
+    "20_6": 16,
+    "20_7": 17,
+    "20_8": 18,
+    "20_9": 19,
+    "20_10": 20,
+    "21_0": 21,
+    "21_1": 22,
+    "21_2": 23,
+    "21_3": 24,
+    "21_4": 25,
+    "21_5": 26,
+    "21_6": 27,
+    "21_7": 28,
+    "21_8": 29,
+    "21_9": 30,
+    "21_10": 31,
+    "200_0": 32,
+    "200_1": 33,
+    "200_2": 34,
+    "200_3": 35,
+    "200_4": 36,
+    "430_0": 37,
+    "430_1": 38,
+    "430_2": 39,
+    "430_3": 40,
+    "430_5": 41,
+    "1000_0": 42,
+    "1000_1": 43,
+    "1000_2": 44,
+    "1000_3": 45,
+    "1000_4": 46,
+    "1000_5": 47,
+    "1000_6": 48,
+    "1000_7": 49,
+    "1000_8": 50,
+    "1000_9": 51,
+    "1000_10": 52,
+    "1000_11": 53,
+    "1000_12": 54,
+    "1000_13": 55,
+    "12_2": 56,
+    "41_0": 57,
+    "41_1": 58,
+    "41_2": 59,
+    "41_3": 60,
+    "41_4": 61,
+    "41_5": 62,
+    "41_6": 63,
+    "41_7": 64,
+    "41_8": 65,
+    "41_9": 66,
+    "41_10": 67,
+    "41_11": 68,
+    "41_12": 69,
+    "6036_0": 70,
+    "6036_1": 71,
+    "6036_2": 72,
+    "6036_3": 73,
+    "6036_4": 74,
+    "6036_5": 75,
+    "6050_0": 76,
+    "6050_1": 77,
+    "6050_2": 78,
+    "6050_3": 79,
+    "6050_4": 80,
+    "6100_0": 81,
+    "6100_1": 82,
+    "6100_2": 83,
+    "6100_3": 84,
+    "6100_4": 85,
+    "6100_5": 86,
+    "6100_6": 87,
+    "6160_0": 88,
+    "6160_1": 89,
+    "6160_2": 90,
+    "6170_0": 91,
+    "6170_1": 92,
+    "6170_2": 93,
+    "6170_3": 94,
+    "6170_4": 95,
+    "6170_5": 96,
+    "6110_0": 97,
+    "6120_0": 98,
+    "6120_1": 99,
+    "6120_2": 100,
+    "6120_3": 101,
+    "6120_4": 102,
+    "6120_5": 103,
+    "6120_6": 104,
+    "6120_7": 105,
+    "6120_8": 106,
+    "980_7": 107,
+    "910_13": 108,
+    "stance-ryu-stance-350-4": 109,
+    "stance-ryu-1950-3": 110,
+    "stance-ryu-1950-2": 111,
+    "stance-ryu-1950-1": 112,
+    "stance-ryu-1950-0": 113,
+    "stance-ryu-stance-2700-3": 114,
+    "stance-ryu-stance-2700-4": 115,
+    "stance-ryu-stance-2700-5": 116,
+    "stance-ryu-stance-2700-6": 117,
+    "stance-ryu-stance-2700-7": 118,
+    "stance-ryu-stance-2350-2": 119,
+    "stance-ryu-stance-2350-4": 120,
+    "stance-ryu-stance-2350-5": 121,
+    "stance-ryu-stance-2350-6": 122,
+    "stance-ryu-stance-2350-7": 123,
+    "stance-ryu-stance-2350-8": 124,
+    "stance-ryu-stance-2800-3": 125,
+    "stance-ryu-stance-2800-4": 126,
+    "stance-ryu-stance-2800-5": 127,
+    "stance-ryu-stance-2800-6": 128,
+    "stance-ryu-stance-2800-7": 129,
+    "stance-ryu-stance-2800-8": 130,
+    "stance-ryu-stance-2800-9": 131
+  },
+  "actions": {
+    "idle": [
+      {
+        "key": "0_0",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_1",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_2",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_3",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_4",
+        "duration": 5,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_5",
+        "duration": 5,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_6",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_8",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_9",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "0_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "walk": [
+      {
+        "key": "20_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_1",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_3",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_4",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_5",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_6",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_8",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_9",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "20_10",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "back": [
+      {
+        "key": "21_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_1",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_3",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_4",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_5",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_6",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_8",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_9",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "21_10",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "punch": [
+      {
+        "key": "stance-ryu-1950-3",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-1950-2",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-1950-1",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-1950-0",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-1950-2",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-1950-3",
+        "duration": 5
+      }
+    ],
+    "kick": [
+      {
+        "key": "stance-ryu-stance-2350-2",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-7",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-8",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2350-2",
+        "duration": 5
+      }
+    ],
+    "special": [
+      {
+        "key": "1000_0",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_1",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_3",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_4",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_5",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_6",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_8",
+        "duration": 5,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_9",
+        "duration": 5,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_10",
+        "duration": 6,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_11",
+        "duration": 7,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_12",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "1000_13",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "12_2",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "jump": [
+      {
+        "key": "41_0",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_1",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_2",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_3",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_4",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_5",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_6",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_8",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_9",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_10",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_11",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "41_12",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "fall": [
+      {
+        "key": "6036_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6036_1",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6036_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6036_3",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6036_4",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6036_5",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6050_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6050_1",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6050_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6050_3",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6050_4",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "landing": [
+      {
+        "key": "6100_0",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_1",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_2",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_3",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_4",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_5",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6100_6",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6160_0",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6160_1",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6160_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_0",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_1",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_1",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_2",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_3",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_4",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6170_5",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6110_0",
+        "duration": 16,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "down": [
+      {
+        "key": "6110_0",
+        "duration": 16,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "rise": [
+      {
+        "key": "6100_5",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_0",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_1",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_2",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_2",
+        "duration": 1,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_3",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_4",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_5",
+        "duration": 4,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_6",
+        "duration": 6,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_7",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "6120_8",
+        "duration": 3,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "980_7",
+        "duration": 2,
+        "dx": 0,
+        "dy": 0
+      },
+      {
+        "key": "910_13",
+        "duration": 5,
+        "dx": 0,
+        "dy": 0
+      }
+    ],
+    "super": [
+      {
+        "key": "1000_0",
+        "duration": 4
+      },
+      {
+        "key": "1000_1",
+        "duration": 4
+      },
+      {
+        "key": "1000_2",
+        "duration": 4
+      },
+      {
+        "key": "1000_3",
+        "duration": 4
+      },
+      {
+        "key": "1000_4",
+        "duration": 4
+      },
+      {
+        "key": "1000_5",
+        "duration": 4
+      },
+      {
+        "key": "1000_6",
+        "duration": 4
+      },
+      {
+        "key": "1000_7",
+        "duration": 4
+      },
+      {
+        "key": "1000_8",
+        "duration": 4
+      },
+      {
+        "key": "1000_9",
+        "duration": 4
+      },
+      {
+        "key": "1000_10",
+        "duration": 4
+      },
+      {
+        "key": "1000_11",
+        "duration": 4
+      },
+      {
+        "key": "1000_12",
+        "duration": 4
+      },
+      {
+        "key": "1000_13",
+        "duration": 4
+      },
+      {
+        "key": "1000_12",
+        "duration": 4
+      },
+      {
+        "key": "1000_11",
+        "duration": 4
+      },
+      {
+        "key": "1000_10",
+        "duration": 4
+      }
+    ],
+    "crouch": [
+      {
+        "key": "stance-ryu-stance-350-4",
+        "duration": 5
+      }
+    ],
+    "crouchPunch": [
+      {
+        "key": "stance-ryu-stance-2700-3",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2700-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2700-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2700-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2700-7",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2700-3",
+        "duration": 5
+      }
+    ],
+    "crouchKick": [
+      {
+        "key": "stance-ryu-stance-2800-3",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-4",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-5",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-6",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-7",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-8",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-9",
+        "duration": 5
+      },
+      {
+        "key": "stance-ryu-stance-2800-3",
+        "duration": 5
+      }
+    ]
+  }
+}

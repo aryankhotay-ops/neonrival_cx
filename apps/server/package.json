@@ -1,0 +1,12 @@
+{
+  "name": "@neon-rival/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --import tsx --watch src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --packages=external --outfile=build/index.js"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}
