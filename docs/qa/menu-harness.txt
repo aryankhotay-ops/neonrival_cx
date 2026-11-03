@@ -1,0 +1,4 @@
+PASS: Escape/P pause routing, frozen simulation, resume, restart, two-player training, CPU selection, online options.
+PASS: all 25 local character-selection pairings reach the fight with the chosen characters.
+PASS: leaving while WebSocket is connecting cannot create a ghost room on a late open.
+PASS: actual menu routing through both training choices, both fighter selections, versus, fight, pause, resume and main menu.

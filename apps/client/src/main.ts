@@ -68,7 +68,7 @@ function openConnection(url:string,request:Record<string,unknown>,recovering:boo
  let ws:WebSocket;try{ws=new WebSocket(url);}catch{if(recovering)scheduleRecovery();else roomMenu('Invalid server address.',url);return;}
  socket=ws;if(!recovering)roomMenu('Connecting to server… A sleeping server can take up to a minute to start.',url,true);
  const connectTimeout=setTimeout(()=>{if(ws.readyState===WebSocket.CONNECTING)ws.close();},recovering?Math.max(1,Math.min(8000,reconnectUntil-Date.now())):65000);
- ws.onopen=()=>{clearTimeout(connectTimeout);ws.send(JSON.stringify(request));if(pingTimer)clearInterval(pingTimer);const ping=()=>{if(ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify({type:'ping',nonce:performance.now()}));};ping();pingTimer=setInterval(ping,3000);};
+ ws.onopen=()=>{clearTimeout(connectTimeout);if(socket!==ws){ws.close();return;}ws.send(JSON.stringify(request));if(pingTimer)clearInterval(pingTimer);const ping=()=>{if(ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify({type:'ping',nonce:performance.now()}));};ping();pingTimer=setInterval(ping,3000);};
  ws.onmessage=e=>{let m:Record<string,any>;try{m=JSON.parse(String(e.data));}catch{return;}if(socket!==ws)return;
   if(m.type==='pong'&&typeof m.nonce==='number'){const sample=Math.max(0,performance.now()-m.nonce);latency=latency===null?sample:latency*.75+sample*.25;scene.setPing(latency);}
   if(m.type==='created'||m.type==='joined'){onlinePlayer=m.player as 0|1;saveSession({code:String(m.code),token:String(m.token),url});reconnectUntil=0;if(m.type==='created')waitingRoom(String(m.code));}

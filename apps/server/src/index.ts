@@ -25,7 +25,7 @@ const requestHandler=(req:import('node:http').IncomingMessage,res:import('node:h
  const pathname=new URL(req.url??'/','http://server.invalid').pathname;
  if(req.method==='GET'&&pathname==='/health'){
   res.writeHead(200,{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'});
-  res.end(JSON.stringify({status:'ok',service:'neon-rival-multiplayer',uptimeSeconds:Math.floor(process.uptime())}));return;
+  res.end(JSON.stringify({status:'ok',service:'neon-rival-multiplayer',uptimeSeconds:Math.floor(process.uptime()),version:process.env.RENDER_GIT_COMMIT?.slice(0,12)||'local'}));return;
  }
  res.writeHead(404,{'content-type':'application/json; charset=utf-8','cache-control':'no-store'});res.end(JSON.stringify({error:'not found'}));
 };

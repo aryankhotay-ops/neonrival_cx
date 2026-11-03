@@ -1,0 +1,52 @@
+✔ QA hostile messages, stale input, capacity, session replacement and expiry (2014.246583ms)
+✔ QA configured connection limit rejects excess clients with HTTP 503 (131.309ms)
+✔ rooms synchronize, recover connections, and require both players for rematches (3160.518083ms)
+✔ Ryu action sequences reference available atlas frames (2.283458ms)
+✔ all fighter animations reference frames inside their sprite atlases (8.629291ms)
+✔ attack damages and awards meter; a landed punch can cancel into special (1.997125ms)
+✔ holding away blocks high attack and timed forward parries it (0.162292ms)
+✔ super requires a full meter and rounds resolve to a match result (0.896ms)
+✔ replaying identical inputs produces identical states (7.289958ms)
+✔ events describe actual hit, block, and parry outcomes deterministically (0.300125ms)
+✔ fighter selection affects movement and persists into round two (0.15ms)
+✔ each attack button starts its corresponding move state for every fighter (0.142958ms)
+✔ Ryu Hadoken travels; Ken uses a close-range Shoryuken instead of a projectile (0.274708ms)
+✔ knockout fall finishes during the round-end pause and stays down (0.121875ms)
+✔ Gill uses Moonsault Knee Drop and Resurrection while Elena advances with Rhino Horn (0.24075ms)
+✔ Dudley uses an advancing boxing special and a meter-gated super (0.095333ms)
+✔ kai moves forward and backward while facing the opponent on either side (1.891333ms)
+✔ vex moves forward and backward while facing the opponent on either side (1.951792ms)
+✔ ryu moves forward and backward while facing the opponent on either side (0.897292ms)
+✔ ken moves forward and backward while facing the opponent on either side (1.634875ms)
+✔ dudley moves forward and backward while facing the opponent on either side (0.244958ms)
+✔ movement animation restarts on action changes and advances only with game frames (0.113333ms)
+✔ Dudley walking and retreating do not include the reversed poses (0.319667ms)
+QA_SIM_PERFORMANCE {"ticks":100000,"totalMs":85.59,"msPerTick":0.00086,"budgetMs":16.67}
+✔ QA arena walls keep both player orders in bounds (0.966208ms)
+✔ QA round intro freezes position, damage and timer until countdown ends (0.161209ms)
+✔ QA a normal punch KO launches the defeated fighter into knockdown (0.264459ms)
+✔ QA airborne fighters can pass over the opponent instead of colliding with the ground pushbox (0.069708ms)
+✔ QA normal hit reach and vertical hitbox boundaries for all five fighters (0.399125ms)
+✔ QA one normal damages once during its active frames and held button does not repeat (0.741375ms)
+✔ QA low attacks require crouch block; timed low parry avoids damage (2.914625ms)
+✔ QA late high parry fails and an incoming punch deals damage (0.223125ms)
+✔ QA every damaging special/super connects and every super requires meter (4.669042ms)
+✔ QA timer expiration, draw round, victory and clean next-round health (0.872333ms)
+✔ QA throws are currently absent from the move configuration (known feature gap) (0.246541ms)
+✔ QA deterministic simulation performance workload: 100000 ticks (86.603541ms)
+✔ QA separated recovered hits must not count as a true combo (0.133416ms)
+✔ QA sustained guard blocks successive impacts during block stun (0.090291ms)
+✔ QA chip damage KO also knocks the defender down (0.116375ms)
+✔ fixed steps are deterministic and do not mutate their input (1.715875ms)
+✔ every fighter locks standing or crouching normals until the move finishes (1.260208ms)
+✔ down alone crouches and stops movement, release stands up; airborne down does not select a sweep (0.116125ms)
+✔ compact keyboard can drive both players simultaneously without overlapping bindings (0.599458ms)
+✔ training computer closes the distance and lands attacks with any selected fighter (16.4175ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5279.207333
