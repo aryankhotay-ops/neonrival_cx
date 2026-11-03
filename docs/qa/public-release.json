@@ -1,0 +1,29 @@
+{
+  "homepage": 200,
+  "javascript": {
+    "status": 200,
+    "path": "/assets/index-BXjgrQwp.js",
+    "bytes": 1525643,
+    "sha256": "40da26dbcc78f46553cb103717c4c3b33c30e608cd0f1f8fa34f4b61a280662c",
+    "multiplayer_endpoint_present": true,
+    "guard_fix_property_present": true
+  },
+  "character_assets": {
+    "assets/sf3/ryu-animations.png": "200; matches repository",
+    "assets/sf3/ryu-animations.json": "200; matches repository",
+    "assets/sf3/ken-animations.png": "200; matches repository",
+    "assets/sf3/ken-animations.json": "200; matches repository",
+    "assets/sf3/elena-animations.png": "200; matches repository",
+    "assets/sf3/elena-animations.json": "200; matches repository",
+    "assets/sf3/gill-animations.png": "200; matches repository",
+    "assets/sf3/gill-animations.json": "200; matches repository",
+    "assets/sf3/dudley-animations.png": "200; matches repository",
+    "assets/sf3/dudley-animations.json": "200; matches repository"
+  },
+  "backend_health": {
+    "status": "ok",
+    "service": "neon-rival-multiplayer",
+    "uptimeSeconds": 203,
+    "version": "59db278b92e7"
+  }
+}

@@ -14,7 +14,7 @@ the browser tool reports `Local browser use is disabled in Work settings`.
 
 Do not interpret a passing source-availability audit as a passing gameplay test
 for an absent feature. The report distinguishes local corrected code from the
-currently deployed backend. Deployment status is recorded at the end.
+currently deployed backend. Deployment status is recorded at the end. Both public hosts were verified on corrected runtime revision `59db278`.
 
 ## Tests actually executed
 
@@ -37,7 +37,7 @@ currently deployed backend. Deployment status is recorded at the end.
 | Cancelled connection | Leave while connection is pending, then deliver its late open callback; no create message may be sent | PASS after client fix |
 | Room create/join | Local WebSocket integration plus two public WSS clients using the production website Origin | PASS |
 | Online synchronization | Matching initial and same-frame state; sequence acknowledgements; stale and nonnumeric input sequence handling | PASS |
-| Rematches | Local full match finishes; one vote waits; both votes restart identical state at frame zero | PASS locally; current QA public rematch rerun recorded below |
+| Rematches | Local full match finishes; one vote waits; both votes restart identical state at frame zero | PASS locally; public full match/rematch passed on corrected revision 59db278 |
 | Disconnect handling | Local pause, valid token recovery, invalid token, replaced session close code 4000, expiry and expired token rejection; public disconnect/recover/leave | PASS |
 | Invalid messages | Local malformed JSON, null/array/number/string roots → 1007; binary → 1003; payload >2 KiB → 1009; >120 messages/sec → 1008 | PASS; intentionally hostile probes were limited to local servers |
 | Origin / capacity | Wrong browser origin → HTTP 403; full room rejected; configured two-connection cap rejects third with HTTP 503 | PASS locally |
@@ -98,8 +98,8 @@ input `value` was corrected in the adapter; it was not treated as a product bug.
   fight using touch alone. A paired keyboard may work; that was not tested.
 - **P1 validation gap:** Browser-console checks, visual animation quality, mobile
   layout and rendered FPS remain unverified until browser access is enabled.
-- **P1 release requirement:** The Render service must run the corrected shared
-  simulation. Deploying only the frontend cannot fix authoritative online combat.
+- **Release requirement resolved:** Render health confirmed corrected shared
+  simulation revision `59db278b92e7`; the corrected frontend is also deployed.
 - **P2:** Collision uses configured distance and height thresholds, not individual
   per-frame polygon/rectangle hitboxes and hurtboxes.
 - **P2:** Server-authoritative input has interpolation but no rollback/client
@@ -114,13 +114,37 @@ input `value` was corrected in the adapter; it was not treated as a product bug.
   support, physical-keyboard rollover and real two-person device testing were
   not executed and are not represented as passes.
 
-## Deployment record
+## Deployment record — verified
 
-- GitHub: changes will be pushed to `aryankhotay-ops/neonrival_cx`, branch `main`.
-- Vercel: `https://neonrival-cx.vercel.app/`; corrected frontend deployment pending.
-- Render: `https://neonrival-cx-rooms.onrender.com`; public baseline network test
-  passed, but it precedes the corrected backend release.
-- `render.yaml` has `autoDeployTrigger: off`. A GitHub push by itself does not
-  deploy the new backend. A manual Render deployment is required; status will
-  be updated after verification.
-- Public full-match/rematch QA rerun and final HTTP/asset/revision checks: pending.
+- GitHub runtime/source revision **59db278b92e7290886e946c740f37efa31d54b1b**
+  pushed to `aryankhotay-ops/neonrival_cx`, branch `main`. The subsequent report
+  commit changes documentation/evidence only and does not require another server
+  restart.
+- Vercel production deployment **dpl_H6tMVjMfGZmv39Au32tbs9P6o2p1** reported
+  **READY**, serving `https://neonrival-cx.vercel.app/` from that runtime revision.
+- Render `/health` reported **HTTP 200**, status `ok`, and version
+  **59db278b92e7** after the user manually deployed the new commit.
+- Public homepage, JavaScript and stylesheet returned HTTP 200 without login.
+  The deployed JavaScript contains the Render WSS endpoint and the new guarding
+  state. All ten character atlas/animation files (PNG + JSON for five fighters)
+  returned HTTP 200 and matched the repository bytes.
+- Corrected backend public rerun: room create/join, identical snapshots, input
+  acknowledgements, disconnect pause, valid-token recovery and leave **PASS**.
+- Corrected backend public full-match/rematch rerun: both clients reached identical
+  match results; one rematch vote waited; two votes restarted identical frame-zero
+  states; leave notified the peer **PASS**.
+- Post-release short network sample: ping RTT **107.0, 128.6, 107.5, 101.0,
+  100.3 ms**; **124 snapshots in 1,978.9 ms**, **123 frames advanced**.
+- Browser access was retried after the user's settings response, including a tool
+  session refresh. The latest inventory still reported `Local browser use is
+  disabled in Work settings`; no live browser-console, screenshot, touch-emulation
+  or rendered-FPS result is claimed.
+- `render.yaml` retains `autoDeployTrigger: off`. Future backend code changes
+  still require a manual deploy; this QA release was verified after that step.
+
+Evidence files in `docs/qa/`: `regression.txt`, `menu-harness.txt`, `build.txt`,
+`public-network.txt` (baseline), `public-network-release.txt`,
+`public-match-release.txt`, and `public-release.json`. These contain executed
+results, not simulated pass labels. The two public checks use real Node WebSocket
+clients with the website's Origin header; they do not substitute for a browser UI
+playthrough.

@@ -1,0 +1,1 @@
+PASS: live full match reaches identical results for both players; rematch waits for both votes and restarts with synchronized state.
