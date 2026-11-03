@@ -47,8 +47,9 @@ function beginLocal(){overlay.classList.add('hidden');document.activeElement ins
 function pauseMenu(){const online=scene.isOnlineMatch;if(online)scene.setOptionsOpen(true);screen(`<div class="pause-card"><div class="kicker">${online?'ONLINE MATCH / OPTIONS':'MATCH PAUSED / LOCAL ARCADE'}</div><h2 class="panel-title">${online?'Match options':'Take a breath'}<span style="color:#d9ff4d">.</span></h2><p class="help">${online?'Online matches keep running while this panel is open.':'The fight is frozen. Resume when you are ready.'}</p><div class="buttons">${button(online?'RETURN TO FIGHT ↗':'RESUME FIGHT ↗',online?'resume-online':'resume','primary')}${online?'':button('RESTART MATCH','restart-fight')}${button(online?'← LEAVE ROOM':'← MAIN MENU','menu','wide')}</div>${online?'':'<p class="pause-hint">P / ESC TO RESUME</p>'}</div>`,'pause');}
 const escapeHtml=(value:string)=>value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 function defaultServer(){if(import.meta.env.VITE_WS_URL)return import.meta.env.VITE_WS_URL;const address=new URL('/ws',location.href);address.protocol=location.protocol==='https:'?'wss:':'ws:';return address.toString();}
-function roomMenu(message='',url=onlineSession?.url||defaultServer()){
+function roomMenu(message='',url=onlineSession?.url||defaultServer(),connecting=false){
  screen(`<div class="kicker">ONLINE / PRIVATE ROOMS</div><h2 class="panel-title">Bring a rival<span style="color:#d9ff4d">.</span></h2><p class="help">Both players must use the same reachable server. Create a room and share its code, or join an existing room.</p><label class="network-label" for="server-url">SERVER ADDRESS</label><input class="room-code server-url" id="server-url" value="${escapeHtml(url)}" aria-label="Server WebSocket address"><label class="network-label" for="room-code">ROOM CODE</label><input class="room-code" id="room-code" maxlength="6" placeholder="ROOM CODE" aria-label="Room code"><p class="message" id="room-message">${escapeHtml(message)}</p><div class="buttons">${button('CREATE ROOM ↗','create','primary')}${button('JOIN ROOM ↗','join')}${button('← CHARACTER SELECT','select','wide')}</div>`);
+ if(connecting){overlay.querySelectorAll<HTMLButtonElement>('[data-action="create"],[data-action="join"]').forEach(button=>button.disabled=true);}
 }
 function waitingRoom(code:string){screen(`<div class="kicker">ROOM ${escapeHtml(code)} / WAITING FOR OPPONENT</div><h2 class="panel-title">ROOM ${escapeHtml(code)}</h2><p class="help">Share this code with your opponent. The match begins when they join.</p><div class="buttons">${button('← LEAVE ROOM','menu')}</div>`);}
 function recoveryScreen(message:string){screen(`<div class="kicker">ONLINE / ROOM RECOVERY</div><h2 class="panel-title">Connection paused<span style="color:#d9ff4d">.</span></h2><p class="help">${escapeHtml(message)}</p><div class="buttons">${button('← LEAVE ROOM','menu')}</div>`);}
@@ -65,8 +66,8 @@ function connect(kind:'create'|'join'){
 }
 function openConnection(url:string,request:Record<string,unknown>,recovering:boolean){
  let ws:WebSocket;try{ws=new WebSocket(url);}catch{if(recovering)scheduleRecovery();else roomMenu('Invalid server address.',url);return;}
- socket=ws;if(!recovering)roomMenu('Connecting to server…',url);
- const connectTimeout=setTimeout(()=>{if(ws.readyState===WebSocket.CONNECTING)ws.close();},3500);
+ socket=ws;if(!recovering)roomMenu('Connecting to server… A sleeping server can take up to a minute to start.',url,true);
+ const connectTimeout=setTimeout(()=>{if(ws.readyState===WebSocket.CONNECTING)ws.close();},recovering?Math.max(1,Math.min(8000,reconnectUntil-Date.now())):65000);
  ws.onopen=()=>{clearTimeout(connectTimeout);ws.send(JSON.stringify(request));if(pingTimer)clearInterval(pingTimer);const ping=()=>{if(ws.readyState===WebSocket.OPEN)ws.send(JSON.stringify({type:'ping',nonce:performance.now()}));};ping();pingTimer=setInterval(ping,3000);};
  ws.onmessage=e=>{let m:Record<string,any>;try{m=JSON.parse(String(e.data));}catch{return;}if(socket!==ws)return;
   if(m.type==='pong'&&typeof m.nonce==='number'){const sample=Math.max(0,performance.now()-m.nonce);latency=latency===null?sample:latency*.75+sample*.25;scene.setPing(latency);}

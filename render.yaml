@@ -1,0 +1,24 @@
+# One server instance owns all rooms. Do not scale horizontally without shared state.
+services:
+  - type: web
+    name: neonrival-cx-rooms
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    numInstances: 1
+    autoDeployTrigger: off
+    buildCommand: npm install --global pnpm@11.25.0 && pnpm install --frozen-lockfile --prod=false && pnpm build:server
+    startCommand: node apps/server/build/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: '24'
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: https://neonrival-cx.vercel.app
+      - key: MAX_CONNECTIONS
+        value: '200'

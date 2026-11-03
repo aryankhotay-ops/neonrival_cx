@@ -103,3 +103,9 @@ Fighter traits, movement, damage, frame timings and move behavior are declared i
 Selection and pre-fight screens use the four portraits supplied through the user's image links and [Dudley artwork](https://www.fightersgeneration.com/nf8/char6/dudley-streetfighterIII-newgeneration-artwork.jpg) from The Fighters Generation. Gill and Elena portraits are from [The Fighters Generation](https://www.fightersgeneration.com/); Ryu and Ken are from the supplied Google image thumbnails. Street Fighter characters and associated art belong to their respective rights holders; permission for redistribution has not been verified. The two players' character names, portraits and styles appear before a local match, and the online room server holds the simulation for a short synchronized introduction.
 
 Stance animation clips are extracted with `scripts/extend-stance-animations.py /path/to/supplied/sheets`. The reviewed clips replace mixed standing/sweep sequences; crouching does not squash the sprite. Ken uses recolored Ryu stance clips as temporary artwork. Dudley’s leg kicks remain a procedural placeholder because his supplied boxing sheet has no leg-kick animation. Elena’s standing punch-button normal retains her capoeira style; her crouching hand extension is temporary procedural artwork over the supplied guard pose.
+
+## Public online rooms
+
+The multiplayer server must be deployed separately from the Vercel frontend.
+See [the prepared deployment and connection steps](docs/online-hosting.md).
+The repository includes a one-instance Free Render Blueprint (`render.yaml`).
