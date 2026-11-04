@@ -1,0 +1,57 @@
+{
+  "deployment": "dpl_EruaprBYHS1ezSJxycT65ZaJYT9d",
+  "commit": "d312227",
+  "script": "/assets/index-CPnjzs19.js",
+  "assets": [
+    {
+      "file": "elena-animations.png",
+      "bytes": 277465,
+      "sha256": "e3127eb7f2704395ad7a2735104014cc817e28c2d06b4928cb95c52eae9493ed"
+    },
+    {
+      "file": "elena-animations.json",
+      "bytes": 12252,
+      "sha256": "200919ce367cfa40582c24a303fe596a6808b6d71d57dd2b10225d28058542be"
+    },
+    {
+      "file": "gill-animations.png",
+      "bytes": 357672,
+      "sha256": "2edc4e6a462c09f9ad4438146b960fc2e784599d2b9431845572b09ae2747a03"
+    },
+    {
+      "file": "gill-animations.json",
+      "bytes": 10815,
+      "sha256": "5e0af72f64582115f69482063236a49d22e710658d4830674cbf1f36758ff466"
+    },
+    {
+      "file": "dudley-animations.png",
+      "bytes": 296376,
+      "sha256": "e21bcdbc5f49656dac8b9b493fba37348a8563d0bd3bfa00a7713a64a6826338"
+    },
+    {
+      "file": "dudley-animations.json",
+      "bytes": 12111,
+      "sha256": "65cd5c3607ad74c0e8377dcf22ce5286152b96392aa59a4e4fb9a7d814f21664"
+    },
+    {
+      "file": "ryu-animations.png",
+      "bytes": 336401,
+      "sha256": "83850ba862f649df917c1dca9804802e95b11823e8259063bcfae2e7a35eb8e2"
+    },
+    {
+      "file": "ryu-animations.json",
+      "bytes": 11407,
+      "sha256": "278a7564290c37714c20281ce3861f90c1c3d36ef06955d920d65e3083553d5a"
+    },
+    {
+      "file": "ken-animations.png",
+      "bytes": 517717,
+      "sha256": "d267e241e23e63d6ad4c71e037117481334bbc56f366321406edd955e4486cba"
+    },
+    {
+      "file": "ken-animations.json",
+      "bytes": 18416,
+      "sha256": "9727a43c192800133c264394889ce8322388ccb47e59e9b2ee87df1b9878c418"
+    }
+  ]
+}

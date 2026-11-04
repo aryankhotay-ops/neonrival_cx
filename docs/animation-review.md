@@ -65,3 +65,23 @@ in the temporary review harness and was fixed; it was not a game runtime error.
 The local review harness is kept under ignored `work/animation-review/` and is
 not included in the production game. The committed screenshots document the
 corrected contact poses. Prior broader QA limitations remain in QA_report.md.
+
+
+## Published verification
+
+Runtime commit `d312227` is live on `https://neonrival-cx.vercel.app/` through
+Vercel deployment `dpl_EruaprBYHS1ezSJxycT65ZaJYT9d` (READY). Anonymous HTTP
+checks confirmed all ten PNG/JSON atlas files match the tested local exports,
+and the browser bundle includes the sprite revision and existing public WSS URL.
+
+In a fresh production browser tab, Training → VS Player → Dudley vs Elena →
+Fight loaded successfully. Actual G and F key presses showed Dudley's new leg
+kick and standing jab respectively. Browser warning/error logs were empty during
+that production check. `docs/qa/animations-live-dudley-kick.png` records the live
+kick. The first F press was during kick recovery and correctly did not cancel
+it; the jab was verified with a later press after recovery. No claim is made that
+all 30 attacks were manually performed in the production browser; those contact
+combinations were covered by the renderer fixture and timing tests.
+
+This release changes presentation and Elena's displayed normal name. It requires
+no Render server redeploy; combat behavior and the network protocol are unchanged.

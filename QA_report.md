@@ -198,3 +198,11 @@ guard frames was replaced with a complete-kick-clip requirement. Actual Phaser
 contact-state screenshots were reviewed for all 30 fighter/attack combinations
 on both sides; walk/back poses were also captured. These are renderer fixture
 checks, not a full physical-keyboard or online gameplay sign-off.
+
+
+Production follow-up: animation runtime commit `d312227` is READY on Vercel
+deployment `dpl_EruaprBYHS1ezSJxycT65ZaJYT9d`. All ten public atlas files matched
+local hashes. A fresh browser training match (Dudley vs Elena) launched, G showed
+the corrected kick and F showed the standing jab after recovery, with no captured
+browser warnings/errors. See docs/qa/animation-public-release.json and
+docs/qa/animations-live-dudley-kick.png. Render was not redeployed.
