@@ -22,7 +22,7 @@ try {
  class Element {value='';hidden=false;innerHTML='';classList={values:new Set(),add(...v){v.forEach(x=>this.values.add(x))},remove(...v){v.forEach(x=>this.values.delete(x))},contains(v){return this.values.has(v)}};focus(){}blur(){}querySelector(){return new Element()}querySelectorAll(){return []}addEventListener(name,fn){this[name]=fn}}
  const overlay=new Element(),exit=new Element();globalThis.HTMLElement=Element;globalThis.document={getElementById:id=>id==='overlay'?overlay:exit,activeElement:null};globalThis.sessionStorage={getItem:()=>null,removeItem(){},setItem(){}};globalThis.location={href:'https://neonrival-cx.vercel.app/',protocol:'https:'};
  const main=join(temp,'main.mjs');
- const sceneStub=`export class FightScene {constructor(){globalThis.menuScene=this;} stop(){} setOptionsOpen(){} setPaused(v){this.onPauseChange(v)} begin(...args){this.started=args} get isOnlineMatch(){return false}}`;
+ const sceneStub=`export class FightScene {constructor(){globalThis.menuScene=this;} stop(){} setNetworkPaused(){} setOptionsOpen(){} setPaused(v){this.onPauseChange(v)} begin(...args){this.started=args} get isOnlineMatch(){return false}}`;
  await build({entryPoints:['apps/client/src/main.ts'],bundle:true,platform:'node',format:'esm',outfile:main,define:{'import.meta.env':'{}'},plugins:[{name:'menu-adapter',setup(b){b.onResolve({filter:/^phaser$|^\.\/scene$|\.css$/},a=>({path:a.path,namespace:'stub'}));b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:a.path==='phaser'?phaser:a.path==='./scene'?sceneStub:'',loader:'js'}));}}]});
  await import(pathToFileURL(main));const click=action=>overlay.click({target:{closest:()=>({dataset:{action}})}});
  click('training');assert.match(overlay.innerHTML,/VS COMPUTER/);assert.match(overlay.innerHTML,/VS PLAYER/);
@@ -32,5 +32,17 @@ try {
  class Socket {static OPEN=1;static CONNECTING=0;static instances=[];readyState=0;sent=[];constructor(url){this.url=url;Socket.instances.push(this)}send(v){this.sent.push(JSON.parse(v))}close(){this.readyState=3}}
  globalThis.WebSocket=Socket;click('online');click('confirm-selection');click('create');const pending=Socket.instances.at(-1);click('menu');pending.readyState=1;pending.onopen();assert.equal(pending.sent.length,0);assert.equal(pending.readyState,3);
  console.log('PASS: leaving while WebSocket is connecting cannot create a ghost room on a late open.');
+ // Model a sleeping host rejecting handshakes before accepting a retry.
+ const realSetTimeout=globalThis.setTimeout,realClearTimeout=globalThis.clearTimeout,realNow=Date.now;
+ const timers=new Map();let now=realNow();Date.now=()=>now;
+ globalThis.setTimeout=(fn,delay)=>{const id={};timers.set(id,{fn,delay});return id};globalThis.clearTimeout=id=>timers.delete(id);
+ const fire=delay=>{const entry=[...timers].find(([,t])=>t.delay===delay);assert.ok(entry,`Expected timer ${delay}`);timers.delete(entry[0]);now+=delay;entry[1].fn()};
+ try {
+  click('online');click('confirm-selection');click('create');const first=Socket.instances.at(-1);first.readyState=3;first.onclose();assert.match(overlay.innerHTML,/Retrying automatically/);fire(3000);
+  const retried=Socket.instances.at(-1);assert.notEqual(retried,first);assert.equal(retried.url,first.url);retried.readyState=1;retried.onopen();assert.equal(retried.sent.filter(m=>m.type==='create').length,1);retried.onmessage({data:JSON.stringify({type:'created',code:'ABCDEF',token:'test-only',player:0})});assert.match(overlay.innerHTML,/ROOM ABCDEF/);click('menu');assert.equal(timers.size,0);
+  click('online');click('confirm-selection');click('create');const cancelled=Socket.instances.at(-1);cancelled.readyState=3;cancelled.onclose();click('select');assert.equal(timers.size,0);assert.match(overlay.innerHTML,/CHOOSE YOUR FIGHTER/);
+  click('confirm-selection');click('create');const expired=Socket.instances.at(-1);now+=90_001;expired.readyState=3;expired.onclose();assert.match(overlay.innerHTML,/Unable to connect/);assert.equal(timers.size,0);click('menu');
+  console.log('PASS: initial handshake failure retries to a created room, Character Select cancels retries, and retries stop after 90 seconds.');
+ } finally {globalThis.setTimeout=realSetTimeout;globalThis.clearTimeout=realClearTimeout;Date.now=realNow;}
  console.log('PASS: actual menu routing through both training choices, both fighter selections, versus, fight, pause, resume and main menu.');
 } finally {await rm(temp,{recursive:true,force:true});}

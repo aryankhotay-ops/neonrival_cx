@@ -148,3 +148,34 @@ Evidence files in `docs/qa/`: `regression.txt`, `menu-harness.txt`, `build.txt`,
 results, not simulated pass labels. The two public checks use real Node WebSocket
 clients with the website's Origin header; they do not substitute for a browser UI
 playthrough.
+
+
+## Online-room connection follow-up — 4 November 2026
+
+A user reported the live game's generic server connection error. The first
+public Render health request returned HTTP 200 with uptime 5 seconds and runtime
+revision `59db278b92e7`, consistent with a sleeping service waking on demand.
+The live Vercel JavaScript was HTTP 200 and contained the correct public WSS URL.
+A cold-start handshake failure was not captured directly; sleeping-server startup
+is the likely cause, rather than a confirmed permanent outage.
+
+The client now retries initial failed WebSocket handshakes for up to 90 seconds,
+with a 3-second interval between failures and an explicit wake-up message.
+Returning to Character Select or the main menu cancels pending retries. Once a
+socket opens, automatic initial retries stop so create/join commands are not
+replayed after an established connection. Existing room recovery is unchanged.
+
+Executed checks:
+
+- Public two-client `scripts/check-online.mjs`: PASS for create, join, matching
+  fight snapshots, input acknowledgement, disconnect pause, recovery and leave.
+- The same smoke check through the local Vite `/ws` proxy: PASS.
+- `node scripts/check-menu-flow.mjs`: PASS, including simulated initial handshake
+  failure followed by successful room creation, cancellation during retry,
+  90-second expiry, and the existing late-open cancellation regression.
+- `pnpm build`: PASS (TypeScript, client and server); existing Vite bundle-size
+  warning remains.
+
+The cold-start retry was tested with deterministic socket/timer fixtures, not by
+forcing the public Render service to sleep. Browser-based room interaction was
+not executed: the browser tool's inventory returned no available tabs.
