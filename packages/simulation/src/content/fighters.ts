@@ -25,8 +25,8 @@ const kenMoves:Record<MoveName,MoveDefinition>={
 export const FIGHTERS:Record<FighterId,FighterDefinition>={
  // Legacy IDs are retained so existing room messages remain compatible.
  kai:{id:'kai',name:'ELENA',title:'THE CAPOEIRA FIGHTER',style:'Capoeira',silhouette:'Long-legged, acrobatic stance and short white hair',traits:'Fast movement and long kicks',description:'A Kenyan fighter whose fluid capoeira emphasizes acrobatic, long-reaching kicks.',appearance:'elena',movement:{walk:34,dash:72,jump:130,highJump:160},moves:{
-  // Elena uses a high kick for her standing punch-button normal.
-  punch:move('High Kick',4,3,10,4,800,'high',14,false),kick:move('Standing Roundhouse',7,4,14,6,1180,'high',17,false),
+  // Hand-button normals use adapted palm sprites; the original sheet has kick normals.
+  punch:move('Standing Palm',4,3,10,4,800,'high',14,false),kick:move('Standing Roundhouse',7,4,14,6,1180,'high',17,false),
   crouchPunch:move('Crouching Palm',5,3,12,4,790,'high',14,false),crouchKick:move('Capoeira Sweep',8,4,17,8,1240,'low',20,true),
   special:move('Rhino Horn',10,5,18,9,1300,'high',18,false,0,'strike',48),super:move('Brave Dance',13,7,27,18,1600,'high',28,true,100,'strike',65)}},
  vex:{id:'vex',name:'GILL',title:'THE EMPEROR',style:'Pyrokinesis and cryokinesis',silhouette:'Tall, muscular figure with long hair',traits:'Powerful close-range attacks and self-restoring super art',description:'The enigmatic final boss of New Generation, wielding fire and ice.',appearance:'gill',movement:{walk:26,dash:60,jump:115,highJump:145},moves:{

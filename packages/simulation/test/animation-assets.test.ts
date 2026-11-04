@@ -19,6 +19,6 @@ test('all fighter animations reference frames inside their sprite atlases',()=>{
    ok(data.actions[action]?.length,`${character} needs ${action} frames`);
    for(const frame of data.actions[action])ok(Number.isInteger(data.frames[frame.key])&&data.frames[frame.key]>=0&&data.frames[frame.key]<count&&frame.duration>0,`${character} ${action} points to a valid frame`);
   }
-  if(character==='dudley')for(const frame of data.actions.kick)ok(frame.key.startsWith('120-'),'Dudley kick must use the guard pose, not the old fall frames');
+  if(character==='dudley')for(const action of ['kick','crouchKick'])for(const frame of data.actions[action])ok(frame.key.startsWith('adapted-'),'Dudley kicks must use complete adapted leg poses, not planted guard or fall frames');
  }
 });

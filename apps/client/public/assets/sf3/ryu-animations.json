@@ -274,107 +274,107 @@
     "punch": [
       {
         "key": "1950-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1950-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1950-1",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1950-0",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1950-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1950-3",
-        "duration": 5
+        "duration": 4
       }
     ],
     "kick": [
       {
         "key": "stance-2350-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2350-2",
-        "duration": 5
+        "duration": 4
       }
     ],
     "special": [
       {
         "key": "3500-0",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-1",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-9",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "3500-10",
-        "duration": 5
+        "duration": 4
       }
     ],
     "fall": [
@@ -480,35 +480,47 @@
     "super": [
       {
         "key": "3500-0",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "3500-1",
+        "duration": 4
       },
       {
         "key": "3500-2",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "3500-3",
+        "duration": 4
       },
       {
         "key": "3500-4",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "3500-5",
+        "duration": 4
       },
       {
         "key": "3500-6",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "3500-7",
+        "duration": 4
       },
       {
         "key": "3500-8",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "3500-9",
+        "duration": 4
       },
       {
         "key": "3500-10",
-        "duration": 5
-      },
-      {
-        "key": "3500-8",
-        "duration": 5
-      },
-      {
-        "key": "3500-6",
-        "duration": 5
+        "duration": 4
       }
     ],
     "crouch": [
@@ -520,62 +532,162 @@
     "crouchPunch": [
       {
         "key": "stance-2700-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2700-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2700-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2700-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2700-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2700-3",
-        "duration": 5
+        "duration": 4
       }
     ],
     "crouchKick": [
       {
         "key": "stance-2800-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-9",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2800-3",
-        "duration": 5
+        "duration": 4
       }
     ]
+  },
+  "attackPhases": {
+    "punch": {
+      "startup": [
+        "1950-3",
+        "1950-2"
+      ],
+      "active": [
+        "1950-1",
+        "1950-0"
+      ],
+      "recovery": [
+        "1950-2",
+        "1950-3"
+      ]
+    },
+    "crouchPunch": {
+      "startup": [
+        "stance-2700-3"
+      ],
+      "active": [
+        "stance-2700-4",
+        "stance-2700-5"
+      ],
+      "recovery": [
+        "stance-2700-6",
+        "stance-2700-7",
+        "stance-2700-3"
+      ]
+    },
+    "kick": {
+      "startup": [
+        "stance-2350-2",
+        "stance-2350-4",
+        "stance-2350-5"
+      ],
+      "active": [
+        "stance-2350-6",
+        "stance-2350-7"
+      ],
+      "recovery": [
+        "stance-2350-8",
+        "stance-2350-4",
+        "stance-2350-2"
+      ]
+    },
+    "crouchKick": {
+      "startup": [
+        "stance-2800-3",
+        "stance-2800-4",
+        "stance-2800-5"
+      ],
+      "active": [
+        "stance-2800-6",
+        "stance-2800-7"
+      ],
+      "recovery": [
+        "stance-2800-8",
+        "stance-2800-9",
+        "stance-2800-3"
+      ]
+    },
+    "special": {
+      "startup": [
+        "3500-0",
+        "3500-1",
+        "3500-2"
+      ],
+      "active": [
+        "3500-3",
+        "3500-4",
+        "3500-5",
+        "3500-6"
+      ],
+      "recovery": [
+        "3500-7",
+        "3500-8",
+        "3500-9",
+        "3500-10"
+      ]
+    },
+    "super": {
+      "startup": [
+        "3500-0",
+        "3500-1",
+        "3500-2"
+      ],
+      "active": [
+        "3500-3",
+        "3500-4",
+        "3500-5",
+        "3500-6"
+      ],
+      "recovery": [
+        "3500-7",
+        "3500-8",
+        "3500-9",
+        "3500-10"
+      ]
+    }
   }
 }

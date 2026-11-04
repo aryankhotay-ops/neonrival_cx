@@ -3,7 +3,7 @@ import { FightScene } from './scene';
 import { FIGHTERS, type FighterId, type GameState } from '@neon-rival/simulation';
 import './style.css';
 const scene=new FightScene();
-new Phaser.Game({type:Phaser.AUTO,parent:'game',width:960,height:540,backgroundColor:'#202e35',scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[scene]});
+new Phaser.Game({type:Phaser.AUTO,pixelArt:true,roundPixels:true,parent:'game',width:960,height:540,backgroundColor:'#202e35',scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[scene]});
 const overlay=document.getElementById('overlay')!;const exitButton=document.getElementById('exit-fight') as HTMLButtonElement;exitButton.onclick=()=>{if(scene.isOnlineMatch)pauseMenu();else scene.setPaused(true);};
 type OnlineSession={code:string;token:string;url:string};
 const sessionKey='neon-rival-room-v1';

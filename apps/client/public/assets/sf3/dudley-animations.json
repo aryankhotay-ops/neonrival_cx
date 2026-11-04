@@ -64,7 +64,30 @@
     "stance-3250-11": 61,
     "stance-3250-12": 62,
     "stance-500-5": 63,
-    "stance-500-6": 64
+    "stance-500-6": 64,
+    "adapted-kick-0": 65,
+    "adapted-kick-1": 66,
+    "adapted-kick-2": 67,
+    "adapted-kick-3": 68,
+    "adapted-crouchKick-0": 69,
+    "adapted-crouchKick-1": 70,
+    "adapted-crouchKick-2": 71,
+    "adapted-crouchKick-3": 72,
+    "review-dudley-4650-0": 73,
+    "review-dudley-4650-1": 74,
+    "review-dudley-4650-2": 75,
+    "review-dudley-4650-3": 76,
+    "review-dudley-4650-4": 77,
+    "review-dudley-4650-5": 78,
+    "review-dudley-4150-8": 79,
+    "review-dudley-4150-9": 80,
+    "review-dudley-5100-0": 81,
+    "review-dudley-5100-1": 82,
+    "review-dudley-5100-2": 83,
+    "review-dudley-5100-3": 84,
+    "review-dudley-5100-4": 85,
+    "review-dudley-5100-5": 86,
+    "review-dudley-5100-7": 87
   },
   "actions": {
     "idle": [
@@ -237,138 +260,138 @@
     ],
     "punch": [
       {
-        "key": "2600-1",
-        "duration": 5
-      },
-      {
-        "key": "2600-0",
-        "duration": 5
-      },
-      {
-        "key": "2600-0",
-        "duration": 5
+        "key": "120-1",
+        "duration": 4
       },
       {
         "key": "2600-1",
-        "duration": 5
+        "duration": 4
       },
       {
-        "key": "2600-2",
-        "duration": 5
+        "key": "2600-0",
+        "duration": 4
+      },
+      {
+        "key": "2600-1",
+        "duration": 4
+      },
+      {
+        "key": "120-1",
+        "duration": 4
       }
     ],
     "kick": [
       {
-        "key": "120-1",
-        "duration": 3
+        "key": "adapted-kick-0",
+        "duration": 4
       },
       {
-        "key": "120-2",
-        "duration": 5
+        "key": "adapted-kick-1",
+        "duration": 4
       },
       {
-        "key": "120-3",
-        "duration": 5
+        "key": "adapted-kick-2",
+        "duration": 4
       },
       {
-        "key": "120-4",
-        "duration": 3
+        "key": "adapted-kick-3",
+        "duration": 4
       },
       {
-        "key": "120-5",
-        "duration": 3
+        "key": "adapted-kick-2",
+        "duration": 4
       },
       {
-        "key": "120-6",
-        "duration": 3
+        "key": "adapted-kick-1",
+        "duration": 4
       },
       {
-        "key": "120-5",
-        "duration": 3
-      },
-      {
-        "key": "120-4",
-        "duration": 3
+        "key": "adapted-kick-0",
+        "duration": 4
       }
     ],
     "special": [
       {
-        "key": "2600-1",
-        "duration": 3
+        "key": "120-1",
+        "duration": 4
       },
       {
-        "key": "2600-0",
-        "duration": 3
+        "key": "review-dudley-4650-0",
+        "duration": 4
       },
       {
-        "key": "2600-2",
-        "duration": 3
+        "key": "review-dudley-4650-1",
+        "duration": 4
       },
       {
-        "key": "2600-1",
-        "duration": 3
+        "key": "review-dudley-4650-2",
+        "duration": 4
       },
       {
-        "key": "2600-0",
-        "duration": 3
+        "key": "review-dudley-4650-3",
+        "duration": 4
       },
       {
-        "key": "2600-2",
-        "duration": 3
+        "key": "review-dudley-4650-2",
+        "duration": 4
       },
       {
-        "key": "2600-1",
-        "duration": 3
+        "key": "review-dudley-4650-4",
+        "duration": 4
       },
       {
-        "key": "2600-0",
-        "duration": 3
+        "key": "review-dudley-4650-5",
+        "duration": 4
       },
       {
-        "key": "2600-2",
-        "duration": 3
-      },
-      {
-        "key": "2600-1",
-        "duration": 3
+        "key": "120-1",
+        "duration": 4
       }
     ],
     "super": [
       {
-        "key": "2950-0",
-        "duration": 5
+        "key": "120-1",
+        "duration": 4
       },
       {
-        "key": "2950-1",
-        "duration": 5
+        "key": "review-dudley-4150-8",
+        "duration": 4
       },
       {
-        "key": "2950-2",
-        "duration": 5
+        "key": "review-dudley-4150-9",
+        "duration": 4
       },
       {
-        "key": "2950-3",
-        "duration": 5
+        "key": "review-dudley-5100-0",
+        "duration": 4
       },
       {
-        "key": "2950-4",
-        "duration": 5
+        "key": "review-dudley-5100-1",
+        "duration": 4
       },
       {
-        "key": "2950-5",
-        "duration": 5
+        "key": "review-dudley-5100-2",
+        "duration": 4
       },
       {
-        "key": "2950-6",
-        "duration": 5
+        "key": "review-dudley-5100-3",
+        "duration": 4
       },
       {
-        "key": "2950-7",
-        "duration": 5
+        "key": "review-dudley-5100-4",
+        "duration": 4
       },
       {
-        "key": "2950-8",
-        "duration": 5
+        "key": "review-dudley-5100-5",
+        "duration": 4
+      },
+      {
+        "key": "review-dudley-5100-7",
+        "duration": 4
+      },
+      {
+        "key": "120-1",
+        "duration": 4
       }
     ],
     "fall": [
@@ -463,55 +486,213 @@
     ],
     "crouchPunch": [
       {
-        "key": "stance-3250-9",
-        "duration": 5
+        "key": "stance-500-4",
+        "duration": 4
       },
       {
         "key": "stance-3250-10",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-3250-11",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-3250-12",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-3250-11",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-3250-10",
-        "duration": 5
+        "duration": 4
       },
       {
-        "key": "stance-3250-9",
-        "duration": 5
+        "key": "stance-500-4",
+        "duration": 4
       }
     ],
     "crouchKick": [
       {
-        "key": "stance-500-4",
-        "duration": 5
+        "key": "adapted-crouchKick-0",
+        "duration": 4
       },
       {
-        "key": "stance-500-5",
-        "duration": 5
+        "key": "adapted-crouchKick-1",
+        "duration": 4
       },
       {
-        "key": "stance-500-6",
-        "duration": 5
+        "key": "adapted-crouchKick-2",
+        "duration": 4
       },
       {
-        "key": "stance-500-5",
-        "duration": 5
+        "key": "adapted-crouchKick-3",
+        "duration": 4
       },
       {
-        "key": "stance-500-4",
-        "duration": 5
+        "key": "adapted-crouchKick-2",
+        "duration": 4
+      },
+      {
+        "key": "adapted-crouchKick-1",
+        "duration": 4
+      },
+      {
+        "key": "adapted-crouchKick-0",
+        "duration": 4
       }
     ]
+  },
+  "attackPhases": {
+    "kick": {
+      "startup": [
+        "adapted-kick-0",
+        "adapted-kick-1",
+        "adapted-kick-2"
+      ],
+      "active": [
+        "adapted-kick-3"
+      ],
+      "recovery": [
+        "adapted-kick-2",
+        "adapted-kick-1",
+        "adapted-kick-0"
+      ]
+    },
+    "crouchKick": {
+      "startup": [
+        "adapted-crouchKick-0",
+        "adapted-crouchKick-1",
+        "adapted-crouchKick-2"
+      ],
+      "active": [
+        "adapted-crouchKick-3"
+      ],
+      "recovery": [
+        "adapted-crouchKick-2",
+        "adapted-crouchKick-1",
+        "adapted-crouchKick-0"
+      ]
+    },
+    "punch": {
+      "startup": [
+        "120-1",
+        "2600-1"
+      ],
+      "active": [
+        "2600-0"
+      ],
+      "recovery": [
+        "2600-1",
+        "120-1"
+      ]
+    },
+    "crouchPunch": {
+      "startup": [
+        "stance-500-4",
+        "stance-3250-10",
+        "stance-3250-11"
+      ],
+      "active": [
+        "stance-3250-12"
+      ],
+      "recovery": [
+        "stance-3250-11",
+        "stance-3250-10",
+        "stance-500-4"
+      ]
+    },
+    "special": {
+      "startup": [
+        "120-1",
+        "review-dudley-4650-0"
+      ],
+      "active": [
+        "review-dudley-4650-1",
+        "review-dudley-4650-2",
+        "review-dudley-4650-3",
+        "review-dudley-4650-2",
+        "review-dudley-4650-4"
+      ],
+      "recovery": [
+        "review-dudley-4650-5",
+        "120-1"
+      ]
+    },
+    "super": {
+      "startup": [
+        "120-1",
+        "review-dudley-4150-8",
+        "review-dudley-4150-9"
+      ],
+      "active": [
+        "review-dudley-5100-0",
+        "review-dudley-5100-1",
+        "review-dudley-5100-2",
+        "review-dudley-5100-3",
+        "review-dudley-5100-4"
+      ],
+      "recovery": [
+        "review-dudley-5100-5",
+        "review-dudley-5100-7",
+        "120-1"
+      ]
+    }
+  },
+  "adaptations": {
+    "kick": "Source-leg articulation; not an original SFIII kick.",
+    "crouchKick": "Source-leg articulation; not an original SFIII sweep."
+  },
+  "frameOffsets": {
+    "7": {
+      "x": 5,
+      "y": 0
+    },
+    "8": {
+      "x": 0,
+      "y": 0
+    },
+    "9": {
+      "x": -2,
+      "y": 0
+    },
+    "10": {
+      "x": 0,
+      "y": 0
+    },
+    "11": {
+      "x": 8,
+      "y": 0
+    },
+    "12": {
+      "x": 12,
+      "y": 0
+    },
+    "13": {
+      "x": 15,
+      "y": 0
+    },
+    "14": {
+      "x": 12,
+      "y": 0
+    },
+    "15": {
+      "x": 13,
+      "y": 0
+    },
+    "16": {
+      "x": 10,
+      "y": 0
+    },
+    "17": {
+      "x": 9,
+      "y": 0
+    },
+    "18": {
+      "x": 9,
+      "y": 0
+    }
   }
 }

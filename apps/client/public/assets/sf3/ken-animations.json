@@ -133,7 +133,19 @@
     "stance-ryu-stance-2800-6": 128,
     "stance-ryu-stance-2800-7": 129,
     "stance-ryu-stance-2800-8": 130,
-    "stance-ryu-stance-2800-9": 131
+    "stance-ryu-stance-2800-9": 131,
+    "review-ryu-3650-0": 132,
+    "review-ryu-3650-1": 133,
+    "review-ryu-3650-2": 134,
+    "review-ryu-3650-3": 135,
+    "review-ryu-3650-5": 136,
+    "review-ryu-3650-6": 137,
+    "review-ryu-3650-7": 138,
+    "review-ryu-3650-8": 139,
+    "review-ryu-3650-9": 140,
+    "review-ryu-3650-10": 141,
+    "review-ryu-3650-11": 142,
+    "review-ryu-3650-12": 143
   },
   "actions": {
     "idle": [
@@ -343,153 +355,111 @@
     "punch": [
       {
         "key": "stance-ryu-1950-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-1950-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-1950-1",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-1950-0",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-1950-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-1950-3",
-        "duration": 5
+        "duration": 4
       }
     ],
     "kick": [
       {
         "key": "stance-ryu-stance-2350-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2350-2",
-        "duration": 5
+        "duration": 4
       }
     ],
     "special": [
       {
-        "key": "1000_0",
-        "duration": 2,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-0",
+        "duration": 4
       },
       {
-        "key": "1000_1",
-        "duration": 2,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-1",
+        "duration": 4
       },
       {
-        "key": "1000_2",
-        "duration": 3,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-2",
+        "duration": 4
       },
       {
-        "key": "1000_3",
-        "duration": 2,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-3",
+        "duration": 4
       },
       {
-        "key": "1000_4",
-        "duration": 1,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-5",
+        "duration": 4
       },
       {
-        "key": "1000_5",
-        "duration": 1,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-6",
+        "duration": 4
       },
       {
-        "key": "1000_6",
-        "duration": 2,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-7",
+        "duration": 4
       },
       {
-        "key": "1000_7",
-        "duration": 3,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-8",
+        "duration": 4
       },
       {
-        "key": "1000_8",
-        "duration": 5,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-9",
+        "duration": 4
       },
       {
-        "key": "1000_9",
-        "duration": 5,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-10",
+        "duration": 4
       },
       {
-        "key": "1000_10",
-        "duration": 6,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-11",
+        "duration": 4
       },
       {
-        "key": "1000_11",
-        "duration": 7,
-        "dx": 0,
-        "dy": 0
-      },
-      {
-        "key": "1000_12",
-        "duration": 3,
-        "dx": 0,
-        "dy": 0
-      },
-      {
-        "key": "1000_13",
-        "duration": 3,
-        "dx": 0,
-        "dy": 0
-      },
-      {
-        "key": "12_2",
-        "duration": 1,
-        "dx": 0,
-        "dy": 0
+        "key": "review-ryu-3650-12",
+        "duration": 4
       }
     ],
     "jump": [
@@ -840,71 +810,47 @@
     ],
     "super": [
       {
-        "key": "1000_0",
+        "key": "review-ryu-3650-0",
         "duration": 4
       },
       {
-        "key": "1000_1",
+        "key": "review-ryu-3650-2",
         "duration": 4
       },
       {
-        "key": "1000_2",
+        "key": "review-ryu-3650-3",
         "duration": 4
       },
       {
-        "key": "1000_3",
+        "key": "review-ryu-3650-5",
         "duration": 4
       },
       {
-        "key": "1000_4",
+        "key": "review-ryu-3650-6",
         "duration": 4
       },
       {
-        "key": "1000_5",
+        "key": "review-ryu-3650-7",
         "duration": 4
       },
       {
-        "key": "1000_6",
+        "key": "review-ryu-3650-8",
         "duration": 4
       },
       {
-        "key": "1000_7",
+        "key": "review-ryu-3650-9",
         "duration": 4
       },
       {
-        "key": "1000_8",
+        "key": "review-ryu-3650-10",
         "duration": 4
       },
       {
-        "key": "1000_9",
+        "key": "review-ryu-3650-11",
         "duration": 4
       },
       {
-        "key": "1000_10",
-        "duration": 4
-      },
-      {
-        "key": "1000_11",
-        "duration": 4
-      },
-      {
-        "key": "1000_12",
-        "duration": 4
-      },
-      {
-        "key": "1000_13",
-        "duration": 4
-      },
-      {
-        "key": "1000_12",
-        "duration": 4
-      },
-      {
-        "key": "1000_11",
-        "duration": 4
-      },
-      {
-        "key": "1000_10",
+        "key": "review-ryu-3650-12",
         "duration": 4
       }
     ],
@@ -917,62 +863,163 @@
     "crouchPunch": [
       {
         "key": "stance-ryu-stance-2700-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2700-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2700-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2700-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2700-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2700-3",
-        "duration": 5
+        "duration": 4
       }
     ],
     "crouchKick": [
       {
         "key": "stance-ryu-stance-2800-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-9",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-ryu-stance-2800-3",
-        "duration": 5
+        "duration": 4
       }
     ]
+  },
+  "attackPhases": {
+    "punch": {
+      "startup": [
+        "stance-ryu-1950-3",
+        "stance-ryu-1950-2"
+      ],
+      "active": [
+        "stance-ryu-1950-1",
+        "stance-ryu-1950-0"
+      ],
+      "recovery": [
+        "stance-ryu-1950-2",
+        "stance-ryu-1950-3"
+      ]
+    },
+    "crouchPunch": {
+      "startup": [
+        "stance-ryu-stance-2700-3"
+      ],
+      "active": [
+        "stance-ryu-stance-2700-4",
+        "stance-ryu-stance-2700-5"
+      ],
+      "recovery": [
+        "stance-ryu-stance-2700-6",
+        "stance-ryu-stance-2700-7",
+        "stance-ryu-stance-2700-3"
+      ]
+    },
+    "kick": {
+      "startup": [
+        "stance-ryu-stance-2350-2",
+        "stance-ryu-stance-2350-4",
+        "stance-ryu-stance-2350-5"
+      ],
+      "active": [
+        "stance-ryu-stance-2350-6",
+        "stance-ryu-stance-2350-7"
+      ],
+      "recovery": [
+        "stance-ryu-stance-2350-8",
+        "stance-ryu-stance-2350-4",
+        "stance-ryu-stance-2350-2"
+      ]
+    },
+    "crouchKick": {
+      "startup": [
+        "stance-ryu-stance-2800-3",
+        "stance-ryu-stance-2800-4",
+        "stance-ryu-stance-2800-5"
+      ],
+      "active": [
+        "stance-ryu-stance-2800-6",
+        "stance-ryu-stance-2800-7"
+      ],
+      "recovery": [
+        "stance-ryu-stance-2800-8",
+        "stance-ryu-stance-2800-9",
+        "stance-ryu-stance-2800-3"
+      ]
+    },
+    "special": {
+      "startup": [
+        "review-ryu-3650-0",
+        "review-ryu-3650-1",
+        "review-ryu-3650-2",
+        "review-ryu-3650-3"
+      ],
+      "active": [
+        "review-ryu-3650-5",
+        "review-ryu-3650-6",
+        "review-ryu-3650-7"
+      ],
+      "recovery": [
+        "review-ryu-3650-8",
+        "review-ryu-3650-9",
+        "review-ryu-3650-10",
+        "review-ryu-3650-11",
+        "review-ryu-3650-12"
+      ]
+    },
+    "super": {
+      "startup": [
+        "review-ryu-3650-0",
+        "review-ryu-3650-2",
+        "review-ryu-3650-3"
+      ],
+      "active": [
+        "review-ryu-3650-5",
+        "review-ryu-3650-6",
+        "review-ryu-3650-7",
+        "review-ryu-3650-8",
+        "review-ryu-3650-9"
+      ],
+      "recovery": [
+        "review-ryu-3650-10",
+        "review-ryu-3650-11",
+        "review-ryu-3650-12"
+      ]
+    }
   }
 }

@@ -4,13 +4,22 @@ import { trainingComputerInput } from './input/trainingComputer';
 import { COMBAT_CODES, keyboardInput } from './input/keyboard';
 import { AudioManager } from './audio/AudioManager';
 import { advanceAnimation, movementAction, type AnimationClock } from './render/movementAnimation';
+import { attackAnimationFrame, type AnimationData } from './render/attackAnimation';
 interface Effect { id:string; x:number; y:number; type:CombatEvent['type']; life:number; player:0|1; move:CombatEvent['move'] }
 
 export class FightScene extends Phaser.Scene {
-  private state:GameState=createInitialState(); private accumulator=0; private keys!:Record<string,Phaser.Input.Keyboard.Key>; private art!:Phaser.GameObjects.Graphics; private hud!:Phaser.GameObjects.Graphics; private limbs!:Phaser.GameObjects.Graphics; private labels:Phaser.GameObjects.Text[]=[]; private sprites:Phaser.GameObjects.Image[]=[]; private paused=false; private active=false; private training=false; private trainingOpponent:'computer'|'player'='computer'; private online=false; private player:0|1=0; private socket:WebSocket|null=null; public onResult:(state:GameState)=>void=()=>{}; public onExit:()=>void=()=>{}; public onPauseChange:(paused:boolean)=>void=()=>{}; private resultShown=false; private audio=new AudioManager(); private effects:Effect[]=[]; private effectIds=new Set<string>(); private onlinePaused=false; private inputSeq=0; private snapshots:{state:GameState;time:number}[]=[]; private pingMs:number|null=null; private animationClocks:[AnimationClock|null,AnimationClock|null]=[null,null];
+  private state:GameState=createInitialState(); private accumulator=0; private keys!:Record<string,Phaser.Input.Keyboard.Key>; private art!:Phaser.GameObjects.Graphics; private hud!:Phaser.GameObjects.Graphics; private labels:Phaser.GameObjects.Text[]=[]; private sprites:Phaser.GameObjects.Image[]=[]; private paused=false; private active=false; private training=false; private trainingOpponent:'computer'|'player'='computer'; private online=false; private player:0|1=0; private socket:WebSocket|null=null; public onResult:(state:GameState)=>void=()=>{}; public onExit:()=>void=()=>{}; public onPauseChange:(paused:boolean)=>void=()=>{}; private resultShown=false; private audio=new AudioManager(); private effects:Effect[]=[]; private effectIds=new Set<string>(); private onlinePaused=false; private inputSeq=0; private snapshots:{state:GameState;time:number}[]=[]; private pingMs:number|null=null; private animationClocks:[AnimationClock|null,AnimationClock|null]=[null,null];
   private pressed=new Set<string>(); private optionsOpen=false;
   constructor(){super('fight');}
-  preload():void {for(const name of ['elena','gill','dudley'] as const){this.load.spritesheet(`${name}-frames`,`/assets/sf3/${name}-animations.png`,{frameWidth:200,frameHeight:180});this.load.json(`${name}-data`,`/assets/sf3/${name}-animations.json`);}this.load.image('sf3-ryu','/assets/sf3/ryu.png');this.load.image('sf3-ken','/assets/sf3/ken.png');this.load.spritesheet('ryu-frames','/assets/sf3/ryu-animations.png',{frameWidth:200,frameHeight:180});this.load.spritesheet('ken-frames','/assets/sf3/ken-animations.png',{frameWidth:200,frameHeight:180});this.load.json('ryu-data','/assets/sf3/ryu-animations.json');this.load.json('ken-data','/assets/sf3/ken-animations.json');}
+  preload():void {
+    // Keep atlas image and frame metadata on the same release in browser caches.
+    const revision='poses-20261104';
+    for(const name of ['elena','gill','dudley','ryu','ken']){
+      this.load.spritesheet(`${name}-frames`,`/assets/sf3/${name}-animations.png?v=${revision}`,{frameWidth:200,frameHeight:180});
+      this.load.json(`${name}-data`,`/assets/sf3/${name}-animations.json?v=${revision}`);
+    }
+    this.load.image('sf3-ryu','/assets/sf3/ryu.png');this.load.image('sf3-ken','/assets/sf3/ken.png');
+  }
   create():void {
     this.keys=this.input.keyboard!.addKeys('P,ESC') as Record<string,Phaser.Input.Keyboard.Key>;
     window.addEventListener('keydown',e=>{if(!this.active||!COMBAT_CODES.has(e.code))return;e.preventDefault();if(!this.paused&&!this.onlinePaused&&!this.optionsOpen&&!e.repeat)this.pressed.add(e.code);});
@@ -43,7 +52,7 @@ export class FightScene extends Phaser.Scene {
     // A narrow rear curb separates the market from the receding floor.
     bg.fillStyle(0x393b33).fillRect(0,floorTop-7,960,7).fillStyle(0xc7a380,.35).fillRect(0,floorTop-7,960,1);
     bg.lineStyle(2,0x17262c).lineBetween(0,210,960,155);for(let i=0;i<10;i++){const x=i*105+24,y=210-i*6;bg.lineStyle(1,0x18262c).lineBetween(x,y,x,y+10);bg.fillStyle(i%2?0xf2bd75:0xf08069).fillCircle(x,y+14,7);}
-    this.art=this.add.graphics();this.sprites=[this.add.image(0,0,'sf3-ryu').setOrigin(.5,1).setVisible(false),this.add.image(0,0,'sf3-ken').setOrigin(.5,1).setVisible(false)];this.limbs=this.add.graphics();this.hud=this.add.graphics();
+    this.art=this.add.graphics();this.sprites=[this.add.image(0,0,'sf3-ryu').setOrigin(.5,1).setVisible(false),this.add.image(0,0,'sf3-ken').setOrigin(.5,1).setVisible(false)];this.hud=this.add.graphics();
     for(let i=0;i<8;i++)this.labels.push(this.add.text(0,0,'',{fontFamily:'Arial',fontStyle:'bold',fontSize:'18px',color:'#f4f3df'}));
   }
   public async toggleAudio():Promise<boolean>{return this.audio.toggle();}
@@ -82,7 +91,7 @@ export class FightScene extends Phaser.Scene {
   }
   private fighterAnimationFrame(p:FighterState,index:0|1):number {
     const appearance=FIGHTERS[p.character].appearance;
-    const data=this.cache.json.get(`${appearance}-data`) as {frames:Record<string,number>;actions:Record<string,{key:string;duration:number}[]>};
+    const data=this.cache.json.get(`${appearance}-data`) as AnimationData;
     let action='idle', clock=this.state.frame, loop=true;
     if(p.knockdown>0){loop=false;const elapsed=48-p.knockdown;
       if(p.y<4000){action='fall';clock=elapsed;}
@@ -90,44 +99,18 @@ export class FightScene extends Phaser.Scene {
       else if(p.knockdown>12){action='down';clock=0;}
       else {action='rise';const duration=data.actions.rise.reduce((sum,f)=>sum+f.duration,0);clock=Math.floor((12-p.knockdown)/12*duration);}
     }
-    else if(p.move){action=p.move;const timing=FIGHTERS[p.character].moves[p.move];const length=timing.startup+timing.active+timing.recovery;const seq=data.actions[action];const duration=seq.reduce((sum,f)=>sum+f.duration,0);clock=Math.floor(Math.min(1,p.moveFrame/length)*Math.max(0,duration-1));loop=false;}
+    else if(p.move){this.animationClocks[index]=advanceAnimation(this.animationClocks[index],p.move,p.character,this.state.frame);return attackAnimationFrame(data,p.move,FIGHTERS[p.character].moves[p.move],p.moveFrame);}
     else if(p.y<4000){action='jump';clock=Math.max(0,Math.min(40,Math.floor((4000-p.y)/20)));loop=false;}
     else if(p.crouching){action='crouch';clock=0;loop=false;}
     else if(Math.abs(p.vx)>0&&p.stun===0&&p.knockdown===0){action=movementAction(p.vx,p.facing);}
     this.animationClocks[index]=advanceAnimation(this.animationClocks[index],action,p.character,this.state.frame);if(loop)clock=this.animationClocks[index]!.elapsed;
     const seq=data.actions[action];const total=seq.reduce((sum,f)=>sum+f.duration,0);let tick=loop?clock%total:Math.min(clock,total-1);for(const f of seq){if(tick<f.duration)return data.frames[f.key];tick-=f.duration;}return data.frames[seq[seq.length-1].key];
   }
-  /** Dudley's supplied SFIII sheet contains boxing attacks but no leg-kick clip.
-   * Keep the move configurable and draw a replaceable leg pose while it plays. */
-  private drawDudleyKick(p:FighterState,pos:{x:number;y:number}):void {
-    const crouching=p.move==='crouchKick';const move=FIGHTERS.dudley.moves[p.move==='crouchKick'?'crouchKick':'kick'];const windup=Math.max(1,move.startup);const recovery=Math.max(1,move.recovery);
-    let progress:number;
-    if(p.moveFrame<windup)progress=.18+.82*p.moveFrame/windup;
-    else if(p.moveFrame<windup+move.active)progress=1;
-    else progress=Math.max(.18,1-(p.moveFrame-windup-move.active)/recovery);
-    const f=p.facing,x=pos.x/10,y=pos.y/10,extension=progress*46;
-    const hip={x:x+f*8,y:y-(crouching?63:95)},knee={x:x+f*(24+extension*.36),y:y-(crouching?48:69)},ankle={x:x+f*(43+extension),y:y-(crouching?37:49)},toe={x:x+f*(69+extension),y:y-(crouching?37:49)};
-    const g=this.limbs;g.lineStyle(25,0x20232a,1).lineBetween(hip.x,hip.y,knee.x,knee.y).lineBetween(knee.x,knee.y,ankle.x,ankle.y);
-    g.lineStyle(19,0x45513a,1).lineBetween(hip.x,hip.y,knee.x,knee.y).lineBetween(knee.x,knee.y,ankle.x,ankle.y);
-    g.lineStyle(16,0x20232a,1).lineBetween(ankle.x,ankle.y,toe.x,toe.y);g.lineStyle(10,0x30333a,1).lineBetween(ankle.x,ankle.y-2,toe.x,toe.y-2);
-    g.fillStyle(0x1b2028).fillCircle(knee.x,knee.y,8).fillCircle(ankle.x,ankle.y,7);
-  }
-  /** Temporary hand extension over Elena's supplied crouching guard pose. */
-  private drawElenaCrouchPunch(p:FighterState,pos:{x:number;y:number}):void {
-    const move=FIGHTERS.kai.moves.crouchPunch;
-    const t=p.moveFrame<move.startup?p.moveFrame/move.startup:p.moveFrame<move.startup+move.active?1:Math.max(0,1-(p.moveFrame-move.startup-move.active)/move.recovery);
-    const x=pos.x/10,y=pos.y/10,f=p.facing,g=this.limbs;
-    g.lineStyle(11,0x9f4b24).lineBetween(x+f*15,y-76,x+f*(29+45*t),y-82);
-    g.lineStyle(6,0xeaa56b).lineBetween(x+f*16,y-78,x+f*(29+45*t),y-84);
-    g.fillStyle(0xeaa56b).fillCircle(x+f*(31+45*t),y-84,6);
-    g.lineStyle(4,0xe4dfc7).lineBetween(x+f*(25+45*t),y-80,x+f*(25+45*t),y-89);
-  }
   private draw():void {
-    const g=this.art;g.clear();this.limbs.clear();
+    const g=this.art;g.clear();
     // A soft contact shadow grounds the fighters while remaining below them during jumps.
     this.state.fighters.forEach((p,i)=>{const pos=this.online?this.renderPosition(i):p;const height=Math.max(0,400-pos.y/10);const scale=Math.max(.5,1-height/300);g.fillStyle(0x1c1716,.28*scale).fillEllipse(pos.x/10,402,100*scale,13*scale);});
-    this.state.fighters.forEach((p,i)=>{const spr=this.sprites[i];const art=FIGHTERS[p.character].appearance;const pos=this.online?this.renderPosition(i):p;const palette:Record<string,number>={elena:0xf4a94f,gill:0x70eaff,ryu:0x66dfff,ken:0xff654f,dudley:0xffca5c};if(p.move==='super'){const pulse=.14+Math.sin(this.state.frame*.22)*.06;g.fillStyle(palette[art],pulse).fillCircle(pos.x/10,pos.y/10-90,105);g.lineStyle(3,palette[art],.48).strokeCircle(pos.x/10,pos.y/10-105,70+Math.sin(this.state.frame*.18)*8);}spr.setVisible(true);spr.setTexture(art+'-frames',this.fighterAnimationFrame(p,i as 0|1));spr.setOrigin(.5,155/180).setPosition(pos.x/10,pos.y/10).setDisplaySize(300,270).setFlipX(p.facing===-1);spr.setTint(p.flash>0?0xffcccc:0xffffff);spr.setAngle(0);});
-    this.state.fighters.forEach((p,i)=>{if(p.character==='dudley'&&(p.move==='kick'||p.move==='crouchKick'))this.drawDudleyKick(p,this.online?this.renderPosition(i):p);if(p.character==='kai'&&p.move==='crouchPunch')this.drawElenaCrouchPunch(p,this.online?this.renderPosition(i):p);});
+    this.state.fighters.forEach((p,i)=>{const spr=this.sprites[i];const art=FIGHTERS[p.character].appearance;const pos=this.online?this.renderPosition(i):p;const palette:Record<string,number>={elena:0xf4a94f,gill:0x70eaff,ryu:0x66dfff,ken:0xff654f,dudley:0xffca5c};if(p.move==='super'){const pulse=.14+Math.sin(this.state.frame*.22)*.06;g.fillStyle(palette[art],pulse).fillCircle(pos.x/10,pos.y/10-90,105);g.lineStyle(3,palette[art],.48).strokeCircle(pos.x/10,pos.y/10-105,70+Math.sin(this.state.frame*.18)*8);}spr.setVisible(true);const frame=this.fighterAnimationFrame(p,i as 0|1);const offset=(this.cache.json.get(`${art}-data`) as AnimationData).frameOffsets?.[frame];spr.setTexture(art+'-frames',frame);spr.setOrigin(.5,155/180).setPosition(pos.x/10+(offset?.x||0)*1.5*p.facing,pos.y/10+(offset?.y||0)*1.5).setDisplaySize(300,270).setFlipX(p.facing===-1);spr.setTint(p.flash>0?0xffcccc:0xffffff);spr.setAngle(0);});
     for(const p of this.state.projectiles){const x=p.x/10,y=p.y/10;const appearance=FIGHTERS[this.state.fighters[p.owner].character].appearance;const color=appearance==='ken'?0xff5947:appearance==='gill'?0x73eaff:appearance==='dudley'?0xffc35c:appearance==='elena'?0xf79b43:0x65dcff;g.fillStyle(color,.22).fillCircle(x,y,p.move==='super'?42:28);g.fillStyle(color,.9).fillCircle(x,y,p.move==='super'?26:16);g.fillStyle(0xffffff,.8).fillCircle(x+p.direction*5,y,6);}
     for(const e of this.effects){
       if(e.type==='attack'&&e.move){const facing=this.state.fighters[e.player].facing;const alpha=e.life/12;const crouchPunch=e.move==='crouchPunch',crouchKick=e.move==='crouchKick',punch=e.move==='punch'||crouchPunch,kick=e.move==='kick'||crouchKick;const color=punch?0xfff0c2:kick?(crouchKick?0xff8c45:0xffad55):e.move==='special'?0x73eaff:0xffe077;const x=e.x+facing*18,y=e.y;if(punch){const hitY=crouchPunch?y+3:y-15;g.lineStyle(5,color,alpha).lineBetween(x,hitY,x+facing*(52+(12-e.life)*4),hitY);g.fillStyle(color,alpha*.8).fillCircle(x+facing*(52+(12-e.life)*4),hitY,5);}else if(kick){const points=crouchKick?[new Phaser.Geom.Point(x,y+42),new Phaser.Geom.Point(x+facing*35,y+48),new Phaser.Geom.Point(x+facing*68,y+43),new Phaser.Geom.Point(x+facing*88,y+34)]:[new Phaser.Geom.Point(x,y+25),new Phaser.Geom.Point(x+facing*28,y+12),new Phaser.Geom.Point(x+facing*62,y+18),new Phaser.Geom.Point(x+facing*82,y+34)];g.lineStyle(6,color,alpha).strokePoints(points);g.lineStyle(2,0xfff0c2,alpha*.8).strokePoints(points.slice(1));}else{const radius=(12-e.life)*5+15;g.lineStyle(e.move==='super'?5:3,color,alpha).strokeCircle(x+facing*35,y-18,radius);if(e.move==='super')for(let i=0;i<6;i++){const a=i*Math.PI/3;g.lineStyle(3,color,alpha).lineBetween(x+facing*35+Math.cos(a)*radius,y-18+Math.sin(a)*radius,x+facing*35+Math.cos(a)*(radius+14),y-18+Math.sin(a)*(radius+14));}}continue;}

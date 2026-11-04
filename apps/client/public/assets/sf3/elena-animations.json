@@ -80,7 +80,26 @@
     "stance-2100-5": 77,
     "stance-2100-6": 78,
     "stance-2100-7": 79,
-    "stance-2100-8": 80
+    "stance-2100-8": 80,
+    "adapted-punch-0": 81,
+    "adapted-punch-1": 82,
+    "adapted-punch-2": 83,
+    "adapted-crouchPunch-0": 84,
+    "adapted-crouchPunch-1": 85,
+    "adapted-crouchPunch-2": 86,
+    "review-elena-4550-4": 87,
+    "review-elena-4550-5": 88,
+    "review-elena-4550-0": 89,
+    "review-elena-4550-1": 90,
+    "review-elena-4550-2": 91,
+    "review-elena-4550-3": 92,
+    "review-elena-2350-6": 93,
+    "review-elena-2350-7": 94,
+    "review-elena-2350-8": 95,
+    "review-elena-2350-9": 96,
+    "review-elena-2350-10": 97,
+    "review-elena-2350-11": 98,
+    "review-elena-2350-12": 99
   },
   "actions": {
     "idle": [
@@ -149,6 +168,30 @@
       {
         "key": "220-18",
         "duration": 3
+      },
+      {
+        "key": "220-17",
+        "duration": 3
+      },
+      {
+        "key": "220-16",
+        "duration": 3
+      },
+      {
+        "key": "220-15",
+        "duration": 3
+      },
+      {
+        "key": "220-14",
+        "duration": 3
+      },
+      {
+        "key": "220-13",
+        "duration": 3
+      },
+      {
+        "key": "220-12",
+        "duration": 3
       }
     ],
     "back": [
@@ -183,6 +226,30 @@
       {
         "key": "220-11",
         "duration": 3
+      },
+      {
+        "key": "220-12",
+        "duration": 3
+      },
+      {
+        "key": "220-13",
+        "duration": 3
+      },
+      {
+        "key": "220-14",
+        "duration": 3
+      },
+      {
+        "key": "220-15",
+        "duration": 3
+      },
+      {
+        "key": "220-16",
+        "duration": 3
+      },
+      {
+        "key": "220-17",
+        "duration": 3
       }
     ],
     "jump": [
@@ -201,154 +268,166 @@
     ],
     "punch": [
       {
-        "key": "1720-0",
-        "duration": 5
+        "key": "adapted-punch-0",
+        "duration": 4
       },
       {
-        "key": "1720-1",
-        "duration": 5
+        "key": "adapted-punch-1",
+        "duration": 4
       },
       {
-        "key": "1720-2",
-        "duration": 5
+        "key": "adapted-punch-2",
+        "duration": 4
       },
       {
-        "key": "1720-3",
-        "duration": 5
+        "key": "adapted-punch-1",
+        "duration": 4
       },
       {
-        "key": "1720-4",
-        "duration": 5
-      },
-      {
-        "key": "1720-3",
-        "duration": 5
-      },
-      {
-        "key": "1720-2",
-        "duration": 5
+        "key": "adapted-punch-0",
+        "duration": 4
       }
     ],
     "kick": [
       {
         "key": "stance-1820-1",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1820-9",
-        "duration": 5
+        "duration": 4
       }
     ],
     "special": [
       {
-        "key": "2100-4",
-        "duration": 5
+        "key": "110-0",
+        "duration": 4
       },
       {
-        "key": "2100-5",
-        "duration": 5
+        "key": "review-elena-4550-0",
+        "duration": 4
       },
       {
-        "key": "2100-6",
-        "duration": 5
+        "key": "review-elena-4550-1",
+        "duration": 4
       },
       {
-        "key": "2100-7",
-        "duration": 5
+        "key": "review-elena-4550-2",
+        "duration": 4
       },
       {
-        "key": "2100-8",
-        "duration": 5
+        "key": "review-elena-4550-3",
+        "duration": 4
       },
       {
-        "key": "2100-7",
-        "duration": 5
+        "key": "review-elena-4550-4",
+        "duration": 4
       },
       {
-        "key": "2100-6",
-        "duration": 5
+        "key": "review-elena-4550-5",
+        "duration": 4
       },
       {
-        "key": "2100-5",
-        "duration": 5
+        "key": "review-elena-2350-6",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-7",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-8",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-9",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-10",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-11",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-2350-12",
+        "duration": 4
+      },
+      {
+        "key": "110-0",
+        "duration": 4
       }
     ],
     "super": [
       {
+        "key": "110-0",
+        "duration": 4
+      },
+      {
         "key": "1980-0",
-        "duration": 5
-      },
-      {
-        "key": "1980-1",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1980-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1980-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1980-4",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "review-elena-4550-4",
+        "duration": 4
+      },
+      {
+        "key": "review-elena-4550-5",
+        "duration": 4
       },
       {
         "key": "1980-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1980-6",
-        "duration": 5
+        "duration": 4
       },
       {
-        "key": "1980-2",
-        "duration": 5
-      },
-      {
-        "key": "1980-3",
-        "duration": 5
-      },
-      {
-        "key": "1980-4",
-        "duration": 5
-      },
-      {
-        "key": "1980-5",
-        "duration": 5
-      },
-      {
-        "key": "1980-6",
-        "duration": 5
+        "key": "110-0",
+        "duration": 4
       }
     ],
     "fall": [
@@ -419,71 +498,199 @@
     ],
     "crouchPunch": [
       {
-        "key": "stance-550-4",
-        "duration": 5
+        "key": "adapted-crouchPunch-0",
+        "duration": 4
       },
       {
-        "key": "stance-550-5",
-        "duration": 5
+        "key": "adapted-crouchPunch-1",
+        "duration": 4
       },
       {
-        "key": "stance-550-6",
-        "duration": 5
+        "key": "adapted-crouchPunch-2",
+        "duration": 4
       },
       {
-        "key": "stance-550-7",
-        "duration": 5
+        "key": "adapted-crouchPunch-1",
+        "duration": 4
       },
       {
-        "key": "stance-550-6",
-        "duration": 5
-      },
-      {
-        "key": "stance-550-5",
-        "duration": 5
-      },
-      {
-        "key": "stance-550-4",
-        "duration": 5
+        "key": "adapted-crouchPunch-0",
+        "duration": 4
       }
     ],
     "crouchKick": [
       {
         "key": "stance-2100-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-8",
-        "duration": 5
-      },
-      {
-        "key": "stance-2100-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2100-4",
-        "duration": 5
+        "duration": 4
       }
     ]
+  },
+  "attackPhases": {
+    "punch": {
+      "startup": [
+        "adapted-punch-0",
+        "adapted-punch-1"
+      ],
+      "active": [
+        "adapted-punch-2"
+      ],
+      "recovery": [
+        "adapted-punch-1",
+        "adapted-punch-0"
+      ]
+    },
+    "crouchPunch": {
+      "startup": [
+        "adapted-crouchPunch-0",
+        "adapted-crouchPunch-1"
+      ],
+      "active": [
+        "adapted-crouchPunch-2"
+      ],
+      "recovery": [
+        "adapted-crouchPunch-1",
+        "adapted-crouchPunch-0"
+      ]
+    },
+    "kick": {
+      "startup": [
+        "stance-1820-1",
+        "stance-1820-2",
+        "stance-1820-3"
+      ],
+      "active": [
+        "stance-1820-4",
+        "stance-1820-5",
+        "stance-1820-6"
+      ],
+      "recovery": [
+        "stance-1820-7",
+        "stance-1820-8",
+        "stance-1820-9"
+      ]
+    },
+    "crouchKick": {
+      "startup": [
+        "stance-2100-4",
+        "stance-2100-5",
+        "stance-2100-6"
+      ],
+      "active": [
+        "stance-2100-7",
+        "stance-2100-8"
+      ],
+      "recovery": [
+        "stance-2100-6",
+        "stance-2100-5",
+        "stance-2100-4"
+      ]
+    },
+    "special": {
+      "startup": [
+        "110-0",
+        "review-elena-4550-0",
+        "review-elena-4550-1",
+        "review-elena-4550-2"
+      ],
+      "active": [
+        "review-elena-4550-3",
+        "review-elena-4550-4",
+        "review-elena-4550-5"
+      ],
+      "recovery": [
+        "review-elena-2350-6",
+        "review-elena-2350-7",
+        "review-elena-2350-8",
+        "review-elena-2350-9",
+        "review-elena-2350-10",
+        "review-elena-2350-11",
+        "review-elena-2350-12",
+        "110-0"
+      ]
+    },
+    "super": {
+      "startup": [
+        "110-0",
+        "1980-0",
+        "1980-2"
+      ],
+      "active": [
+        "1980-3",
+        "1980-4",
+        "review-elena-4550-4",
+        "review-elena-4550-5"
+      ],
+      "recovery": [
+        "1980-5",
+        "1980-6",
+        "110-0"
+      ]
+    }
+  },
+  "adaptations": {
+    "punch": "Source-arm palm articulation; original sheet uses kick normals.",
+    "crouchPunch": "Source-arm palm articulation; original sheet uses kick normals."
+  },
+  "frameOffsets": {
+    "5": {
+      "x": 16,
+      "y": 0
+    },
+    "6": {
+      "x": -4,
+      "y": 0
+    },
+    "7": {
+      "x": -7,
+      "y": 0
+    },
+    "8": {
+      "x": -7,
+      "y": 0
+    },
+    "9": {
+      "x": 7,
+      "y": 0
+    },
+    "10": {
+      "x": 1,
+      "y": 0
+    },
+    "11": {
+      "x": 4,
+      "y": 0
+    },
+    "12": {
+      "x": 7,
+      "y": 0
+    }
   }
 }

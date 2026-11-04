@@ -186,3 +186,15 @@ Frontend commit `385d035` was pushed to GitHub and deployed to Vercel production
 `dpl_8vw9WXbzFVSGf9Xi4vFK5PyhD79Z`, status READY, canonical alias
 `https://neonrival-cx.vercel.app/`. The Render runtime was unchanged; no backend
 deployment was needed.
+
+
+## Animation correction follow-up — 4 November 2026
+
+See [the animation review](docs/animation-review.md) for exact changes, source
+limitations and checks. The final suite passed 54/54 tests (5,434.52 ms), the
+menu/scene harness passed, the pixel audit passed, and the production build
+passed. The obsolete regression assertion that Dudley's kick must use planted
+guard frames was replaced with a complete-kick-clip requirement. Actual Phaser
+contact-state screenshots were reviewed for all 30 fighter/attack combinations
+on both sides; walk/back poses were also captured. These are renderer fixture
+checks, not a full physical-keyboard or online gameplay sign-off.

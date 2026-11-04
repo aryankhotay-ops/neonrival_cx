@@ -57,7 +57,24 @@
     "stance-2400-6": 54,
     "stance-2400-7": 55,
     "stance-2400-8": 56,
-    "stance-2400-9": 57
+    "stance-2400-9": 57,
+    "review-gill-3000-0": 58,
+    "review-gill-3000-1": 59,
+    "review-gill-3000-3": 60,
+    "review-gill-3000-4": 61,
+    "review-gill-3000-5": 62,
+    "review-gill-3000-6": 63,
+    "review-gill-3150-4": 64,
+    "review-gill-3150-5": 65,
+    "review-gill-6000-3": 66,
+    "review-gill-6000-4": 67,
+    "review-gill-6000-6": 68,
+    "review-gill-6100-0": 69,
+    "review-gill-6100-2": 70,
+    "review-gill-6100-3": 71,
+    "review-gill-6100-4": 72,
+    "review-gill-6100-5": 73,
+    "review-gill-6100-6": 74
   },
   "actions": {
     "idle": [
@@ -206,98 +223,142 @@
     ],
     "punch": [
       {
+        "key": "1100-7",
+        "duration": 4
+      },
+      {
         "key": "1100-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1100-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "1100-6",
-        "duration": 5
+        "duration": 4
+      },
+      {
+        "key": "1100-4",
+        "duration": 4
       },
       {
         "key": "1100-7",
-        "duration": 5
+        "duration": 4
       }
     ],
     "kick": [
       {
         "key": "stance-1950-0",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-1950-0",
-        "duration": 5
+        "duration": 4
       }
     ],
     "special": [
       {
-        "key": "1950-0",
-        "duration": 5
+        "key": "1100-7",
+        "duration": 4
       },
       {
-        "key": "1950-3",
-        "duration": 5
+        "key": "review-gill-3000-0",
+        "duration": 4
       },
       {
-        "key": "1950-5",
-        "duration": 5
+        "key": "review-gill-3000-1",
+        "duration": 4
       },
       {
-        "key": "1950-6",
-        "duration": 5
+        "key": "review-gill-3000-3",
+        "duration": 4
       },
       {
-        "key": "1950-8",
-        "duration": 5
+        "key": "review-gill-3000-4",
+        "duration": 4
       },
       {
-        "key": "1950-6",
-        "duration": 5
+        "key": "review-gill-3000-5",
+        "duration": 4
       },
       {
-        "key": "1950-5",
-        "duration": 5
+        "key": "review-gill-3000-6",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-3150-4",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-3150-5",
+        "duration": 4
+      },
+      {
+        "key": "1100-7",
+        "duration": 4
       }
     ],
     "super": [
       {
-        "key": "4000-6",
-        "duration": 5
+        "key": "review-gill-6000-3",
+        "duration": 4
       },
       {
-        "key": "4000-8",
-        "duration": 5
+        "key": "review-gill-6000-4",
+        "duration": 4
       },
       {
-        "key": "4000-10",
-        "duration": 5
+        "key": "review-gill-6000-6",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-0",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-2",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-3",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-4",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-5",
+        "duration": 4
+      },
+      {
+        "key": "review-gill-6100-6",
+        "duration": 4
       },
       {
         "key": "1100-7",
@@ -305,18 +366,6 @@
       },
       {
         "key": "1100-8",
-        "duration": 4
-      },
-      {
-        "key": "1100-9",
-        "duration": 4
-      },
-      {
-        "key": "1100-10",
-        "duration": 4
-      },
-      {
-        "key": "1100-11",
         "duration": 4
       }
     ],
@@ -377,62 +426,207 @@
     "crouchPunch": [
       {
         "key": "stance-2150-2",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2150-3",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2150-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2150-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2150-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2150-2",
-        "duration": 5
+        "duration": 4
       }
     ],
     "crouchKick": [
       {
         "key": "stance-2400-4",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-5",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-7",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-8",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-9",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-6",
-        "duration": 5
+        "duration": 4
       },
       {
         "key": "stance-2400-4",
-        "duration": 5
+        "duration": 4
       }
     ]
+  },
+  "attackPhases": {
+    "punch": {
+      "startup": [
+        "1100-7",
+        "1100-4"
+      ],
+      "active": [
+        "1100-5",
+        "1100-6"
+      ],
+      "recovery": [
+        "1100-4",
+        "1100-7"
+      ]
+    },
+    "crouchPunch": {
+      "startup": [
+        "stance-2150-2",
+        "stance-2150-3"
+      ],
+      "active": [
+        "stance-2150-4",
+        "stance-2150-5"
+      ],
+      "recovery": [
+        "stance-2150-6",
+        "stance-2150-2"
+      ]
+    },
+    "kick": {
+      "startup": [
+        "stance-1950-0",
+        "stance-1950-2",
+        "stance-1950-3"
+      ],
+      "active": [
+        "stance-1950-5",
+        "stance-1950-6"
+      ],
+      "recovery": [
+        "stance-1950-7",
+        "stance-1950-8",
+        "stance-1950-0"
+      ]
+    },
+    "crouchKick": {
+      "startup": [
+        "stance-2400-4",
+        "stance-2400-5",
+        "stance-2400-6"
+      ],
+      "active": [
+        "stance-2400-7",
+        "stance-2400-8"
+      ],
+      "recovery": [
+        "stance-2400-9",
+        "stance-2400-6",
+        "stance-2400-4"
+      ]
+    },
+    "special": {
+      "startup": [
+        "1100-7",
+        "review-gill-3000-0",
+        "review-gill-3000-1"
+      ],
+      "active": [
+        "review-gill-3000-3",
+        "review-gill-3000-4",
+        "review-gill-3000-5",
+        "review-gill-3000-6"
+      ],
+      "recovery": [
+        "review-gill-3150-4",
+        "review-gill-3150-5",
+        "1100-7"
+      ]
+    },
+    "super": {
+      "startup": [
+        "review-gill-6000-3",
+        "review-gill-6000-4",
+        "review-gill-6000-6",
+        "review-gill-6100-0"
+      ],
+      "active": [
+        "review-gill-6100-2",
+        "review-gill-6100-3",
+        "review-gill-6100-4",
+        "review-gill-6100-5",
+        "review-gill-6100-6"
+      ],
+      "recovery": [
+        "1100-7",
+        "1100-8"
+      ]
+    }
+  },
+  "frameOffsets": {
+    "5": {
+      "x": -18,
+      "y": 0
+    },
+    "6": {
+      "x": -18,
+      "y": 0
+    },
+    "7": {
+      "x": -17,
+      "y": 0
+    },
+    "8": {
+      "x": -17,
+      "y": 0
+    },
+    "9": {
+      "x": -18,
+      "y": 0
+    },
+    "10": {
+      "x": -18,
+      "y": 0
+    },
+    "11": {
+      "x": -18,
+      "y": 0
+    },
+    "12": {
+      "x": -18,
+      "y": 0
+    },
+    "13": {
+      "x": -18,
+      "y": 0
+    },
+    "14": {
+      "x": -18,
+      "y": 0
+    },
+    "15": {
+      "x": -18,
+      "y": 0
+    }
   }
 }
