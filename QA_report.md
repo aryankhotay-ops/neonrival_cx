@@ -177,5 +177,12 @@ Executed checks:
   warning remains.
 
 The cold-start retry was tested with deterministic socket/timer fixtures, not by
-forcing the public Render service to sleep. Browser-based room interaction was
-not executed: the browser tool's inventory returned no available tabs.
+forcing the public Render service to sleep. Browser access became available after deployment. In the live in-app browser,
+Online Rooms → Continue to Rooms → Create Room reached the waiting-room screen
+with code `60B8F0`: PASS. Browser error/warning logs were empty during this check.
+Screenshot: `docs/qa/live-room-2026-11-04.png`.
+
+Frontend commit `385d035` was pushed to GitHub and deployed to Vercel production:
+`dpl_8vw9WXbzFVSGf9Xi4vFK5PyhD79Z`, status READY, canonical alias
+`https://neonrival-cx.vercel.app/`. The Render runtime was unchanged; no backend
+deployment was needed.
